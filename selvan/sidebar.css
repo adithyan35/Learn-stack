@@ -12,7 +12,11 @@
 } 
 .side_bar_icon{
     font-size: 24px;
-    opacity: 0.5;
+    opacity: 0.5; 
+    &:hover {
+        opacity: 2;
+        cursor: pointer;
+      }
 }
 .side_bar_division{
     height: 81px;
