@@ -1,0 +1,112 @@
+.cat{
+   
+    width: 200px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    
+}
+
+.cat-1{
+   
+    width: 200px;
+    margin-bottom: 50px;
+    
+}
+
+.cat-2{
+   
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.search-bar{
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.search-bar-1{
+    display: flex;
+    /* flex-grow: 1; */
+     padding: 0 5% 0 3%;
+     margin-bottom: 20px;
+}
+
+.search-bar-2{
+    font-size: 30px;
+    width: 100%;
+    /* padding: 0 5% 0 3%; */
+    border-radius: 10px;
+}
+
+.Email{
+ font-size: 15px;
+ margin-bottom: 5px;
+}
+
+.search-bar-3{
+    width: 50%;
+    margin-bottom: 5px;
+}
+.terms{
+    font-size: 15px;
+    color: rgb(96, 96, 96) ;
+}
+.agree{
+        background-color: blue;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 16px;
+        padding-right: 15px;
+        border: 2px solid blue;
+        border-radius: 18px;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 20px;
+        width: 50%;
+        transition: opacity 0.15s,
+        box-shadow 0.15s;
+    }
+    .agree:hover{
+        opacity: 0.8;
+        box-shadow: 3px 3px 3px rgba(11, 34, 245, 0.5);
+        }
+        .twitter{
+            display: flex;
+        }
+
+        .cat-4{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+.content{
+    color: gray;
+    margin-right: 20px;
+}
+.tweet{
+    background-color: blue;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: 2px solid blue;
+    border-radius: 18px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+    transition: box-shadow 0.15s;
+}
+.tweet:hover{
+        /* background-color: orange;
+        border-radius: 2px solid orange; */
+        box-shadow: 3px 3px 3px rgb(91, 80, 253);
+    }
