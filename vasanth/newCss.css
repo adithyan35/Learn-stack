@@ -1,0 +1,323 @@
+.container {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 500px;
+}
+
+.amazonRef {
+    color: rgb(0, 113, 133);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.paragraphTitle {
+    font-weight: bold;
+    font-size: 36px;
+    color: black;
+}
+
+.paragraphRupees {
+    font-weight: bold;
+    font-size: 24px;
+    color: rgb(0, 118, 0);
+}
+
+.paragraphDelivery {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.buyButton {
+    background-color: rgb(255, 164, 0);
+    color: black;
+    border-color: rgb(255, 164, 0);
+    width: 150px;
+    height: 36px;
+    margin-top: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 18px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.buyButton:hover {
+    opacity: 0.8;
+}
+
+.buyButton:active {
+    opacity: 0.3;
+}
+
+.subscribeButton {
+    background-color: rgb(201, 2, 2);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 105px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: opacity 0.15s;
+    margin-left: 20px;
+}
+
+.subscribeButton:hover {
+    opacity: 0.8;
+}
+
+.subscribeButton:active {
+    opacity: 0.5;
+}
+
+.joinButton {
+    background-color: white;
+    border-color: rgb(41, 118, 211);
+    border-style: solid;
+    border-width: 1px;
+    height: 36px;
+    width: 62px;
+    color: rgb(41, 118, 211);
+    border-radius: 2px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.joinButton:hover {
+    background-color: rgb(41, 118, 211);
+    color: white;
+}
+
+.joinButton:active {
+    opacity: 0.7;
+}
+
+.tweetButton {
+    background-color: rgb(2, 137, 255);
+    border: none;
+    height: 36px;
+    width: 74px;
+    color: white;
+    border-radius: 18px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: box-shadow 0.15s, color 0.15s;
+}
+
+.tweetButton:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.uberButton {
+    background-color: black;
+    color: white;
+    border-color: white;
+    width: 150px;
+    height: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 1px;
+    transition: opacity 0.8s;
+}
+
+.amazonButton {
+    background-color: rgb(255, 216, 20);
+    color: black;
+    border-color: yellow;
+    width: 150px;
+    height: 36px;
+    margin-top: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 18px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.amazonButton:hover {
+    opacity: 0.8;
+}
+
+.amazonButton:active {
+    opacity: 0.3;
+}
+
+.gitButton {
+
+    background-color: rgb(46, 164, 79);
+    color: white;
+    border-color: white;
+    width: 150px;
+    height: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 1px;
+}
+
+.bootstrapButton {
+    background-color: rgb(121, 82, 179);
+    color: white;
+    border-color: white;
+    width: 150px;
+    height: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 1px;
+}
+
+.downloadButton {
+    background-color: white;
+    color: rgb(108, 117, 125);
+    border-color: rgb(108, 117, 125);
+    width: 150px;
+    height: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 1px;
+}
+
+.linkedButton {
+    background-color: rgb(10, 102, 194);
+    color: white;
+    border-color: rgb(10, 102, 194);
+    width: 260px;
+    height: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 1px;
+}
+
+.saveButton {
+    background-color: white;
+    color: rgb(10, 102, 194);
+    border-color: rgb(10, 102, 194);
+    width: 70px;
+    height: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 1px;
+}
+
+.stretchButton {
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    transition: padding-top 1s,
+        padding-bottom 1s,
+        padding-left 1s,
+        padding-right 1s;
+}
+
+.stretchButton:hover {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+.shadowButton {
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.shadowButton:active {
+    margin-top: 3px;
+    margin-left: 3px;
+    /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); */
+    box-shadow: none;
+}
+
+.stretch-button {
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    cursor: pointer;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    transition: padding 0.15s,
+        margin 0.15s;
+}
+
+.stretch-button:hover {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.back-button {
+    margin-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+}
+
+.search-result {
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 18px;
+}
+
+.next-button {
+    margin-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+}
