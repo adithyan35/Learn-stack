@@ -1,5 +1,5 @@
 .side_bar{
-    background-color: aquamarine;
+    background-color: rgb(222, 224, 226);
     position: fixed;
     top: 69px;
     bottom: 0;
@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 8px 0px;
 } 
 .side_bar_icon{
     font-size: 24px;
@@ -19,7 +20,7 @@
     flex-direction: column;
     justify-content: center;
 }
-.side_bar_divisions{
-    height: 80px;
-    background-color: rgb(229, 155, 155);
+.side_bar_text{
+    margin-top: 9px;
+    font-size: 12px;
 }
