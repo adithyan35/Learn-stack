@@ -1,0 +1,413 @@
+.subcribe{
+    background-color: red;
+    color: white;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 8px ;
+    transition: opacity 0.15s;
+    
+    }
+    .subcribe:hover{
+        opacity: 0.8;
+        box-shadow: 3px 3px 3px rgb(251, 73, 73);
+    }
+    .subcribe:active{
+        opacity: 0.3;
+    }
+
+.join{
+    background-color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid blue;
+    border-radius: 2px;
+    cursor: pointer;
+    color: blue;
+    margin-bottom: 8px;
+   transition: background-color 1s,
+   color 1s;
+   
+}
+
+.join:hover{
+        background-color:blue;
+        color:white ;
+        box-shadow: 3px 3px 3px grey;
+    }
+    .join:active{
+        opacity: 0.7;
+    }
+
+    .tweet{
+    background-color: blue;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: 2px solid blue;
+    border-radius: 18px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+    transition: box-shadow 0.15s;
+}
+.tweet:hover{
+        /* background-color: orange;
+        border-radius: 2px solid orange; */
+        box-shadow: 3px 3px 3px rgb(91, 80, 253);
+    }
+
+    .uber{
+    background-color: black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: opacity 0.15s;
+}
+.uber:hover{
+    opacity: 0.8;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .amazon{
+    background-color: rgb(255, 216, 20);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: none;
+    border-radius: 18px;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: opacity 0.15s,
+    box-shadow 0.15s;
+}
+.amazon:hover{
+    opacity: 0.7;
+    box-shadow: 3px 3px 3px rgba(246, 235, 26, 0.5);
+    }
+    .GitHub{
+    background-color: rgb(46, 164, 79);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: opacity 0.15s,
+    box-shadow 0.15s;
+}
+.GitHub:hover{
+    opacity: 0.8;
+    box-shadow: 3px 3px 3px rgba(48, 244, 103, 0.5);
+    }
+
+    .bootstrap{
+    background-color: rgb(121, 82, 179);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.15s,
+    box-shadow 0.15s;
+margin-bottom: 8px;
+}
+.bootstrap:hover{
+    opacity: 0.8;
+    box-shadow: 3px 3px 3px rgba(231, 37, 237, 0.162);
+    }
+
+    .download{
+    background-color:whitesmoke;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: 1px solid rgb(108, 117, 125);
+    border-radius: 3px;
+    color:  rgb(108, 117, 125);
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: opacity 0.15s,
+    box-shadow 0.15s;
+}
+.download:hover{
+    opacity: 0.8;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .linkedin{
+    background-color: blue;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: 2px solid blue;
+    border-radius: 18px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+    transition: opacity 0.15s,
+    box-shadow 0.15s;
+}
+.linkedin:hover{
+    opacity: 0.8;
+    box-shadow: 3px 3px 3px rgba(11, 34, 245, 0.5);
+    }
+
+    .save{
+    background-color: blue;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: 1px solid blue;
+    border-radius: 18px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+    transition: opacity 0.15s,
+    box-shadow 0.15s;
+}
+.save:hover{
+         opacity: 0.8;
+    box-shadow: 3px 3px 3px rgba(43, 20, 249, 0.5);
+    }
+    p:nth-child(3){
+    color: rgb(0, 118, 0);
+   }
+
+    .cart{
+        background-color: wheat;
+        height: 200px;
+        width: 50vh;
+        padding-left: 10px;
+        transition: opacity 0.15s,
+    box-shadow 0.15s;
+    margin-bottom: 10px;
+        
+    }
+
+    .cart:hover{
+        opacity: 0.8;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+   :nth-last-child(4){
+    color: black;
+    font-weight: bold;
+   }
+
+    a{
+       color: rgb(0, 113, 133); 
+       b
+    }
+
+   
+    .add{
+    background-color: rgb(255, 216, 20);
+    height: 36px;
+    width: 100px;
+    border: none;
+    border-radius: 18px;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: opacity 0.15s,
+    box-shadow 0.15s;
+}
+.add:hover{
+    opacity: 0.8;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .buy{
+    background-color: rgb(255, 164, 28);
+    height: 36px;
+    width: 100px;
+    border: none;
+    border-radius: 18px;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: opacity 0.15s,
+    box-shadow 0.15s;
+}
+.buy:hover{
+    opacity: 0.8;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .back{
+    background-color: rgb(244, 240, 248);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.15s,
+    box-shadow 0.15s;
+margin-bottom: 8px;
+    }
+    .back:hover{
+        opacity: 0.8;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+    .page{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .page:hover{
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .next{
+    background-color: rgb(244, 240, 248);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.15s,
+    box-shadow 0.15s;
+margin-bottom: 8px;
+    }
+    .next:hover{
+        opacity: 0.8;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+.stretch{
+    background-color: rgb(18, 249, 153);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: black;
+    cursor: pointer;
+    transition: opacity 0.15s,
+    box-shadow 0.15s;
+    margin-bottom: 8px;
+}
+
+.stretch:hover{
+    background-color: rgb(103, 205, 245);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32;
+    padding-right: 30px;
+
+}
+
+.shadow{
+    background-color: rgb(18, 249, 153);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: black;
+    cursor: pointer;
+    transition: opacity 1s,
+    box-shadow 0.15s;
+    margin-bottom: 8px;
+}
+.shadow:hover{
+    /* transform: translateY(-3px);
+    transform: translateX(-3px); */
+    transform: translate3d(2px,2px,3px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.one{
+    background-color: rgb(18, 249, 153);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: black;
+    cursor: pointer;
+    transition: opacity 1s,
+    box-shadow 0.15s;
+    margin-bottom: 8px;   
+    margin-right: 12px; 
+}
+.one:hover{
+    padding-left:25px ;
+    padding-right: 25px;
+}
+
+.two{
+    background-color: rgb(18, 249, 153);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: black;
+    cursor: pointer;
+    transition: opacity 1s,
+    box-shadow 0.15s;
+    margin-bottom: 8px; 
+    margin-right: 12px;  
+}
+.two:hover{
+    padding-left:25px ;
+    padding-right: 25px;
+}
+
+.three{
+    background-color: rgb(18, 249, 153);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: black;
+    cursor: pointer;
+    transition: opacity 1s,
+    box-shadow 0.15s;
+    margin-bottom: 8px;   
+}
+.three:hover{
+    padding-left:25px ;
+    padding-right: 25px;
+}

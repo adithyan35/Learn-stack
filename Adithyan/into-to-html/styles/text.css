@@ -1,0 +1,222 @@
+p{
+    font-family: arial;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.video-title{
+font-size: 18px;
+font-weight: bold;
+width: 300px;
+line-height: 24px;
+margin-bottom: 5px;
+}
+
+.video-state{
+font-size: 14px;
+font-weight: lighter;
+color:rgb(96, 96, 96) ;
+margin-bottom: 15px;
+
+}
+.author{
+color:rgb(96, 96, 96) ;
+font-size: 14px;
+margin-bottom: 20px;
+}
+.description{
+font-size: 14px;
+font-weight: lighter;
+width: 250px;
+color:rgb(96, 96, 96) ;
+margin-bottom: 15px;
+}
+.apple{
+background-color: red;
+color: white;
+font-size: 14px;
+text-align: center;
+padding-top: 12px;
+padding-bottom: 12px;
+margin-bottom: 20px;
+}
+.shop:hover{
+text-decoration: underline;
+
+}
+u{
+cursor: pointer;
+}
+
+.tahoma{
+margin-bottom: 20px;
+font-size: 20px;
+font-family: tahoma;
+font-weight: bold;
+}
+
+.arial{
+font-family: arial;
+font-size: 25px;
+font-weight: bold;
+}
+
+.color{
+font-family: arial;
+font-size: 16px;
+font-style: italic;
+color: red;
+margin-bottom: 20px;
+}
+.course{
+font-family: verdana;
+font-size: 16px;
+font-weight: bold;   
+}
+.course-for{
+color:rgb(96, 96, 96) ;
+font-family: verdana;
+font-size: 12px;
+margin-bottom: 20px;
+}
+.details{
+font-family: verdana;
+width: 300px;
+font-size: 14px;
+margin-bottom: 20px;
+}
+.btn{
+background-color: rgb(70, 237, 120);
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 16px;
+padding-right: 15px;
+border: none;
+border-radius: 5px;
+color: white;
+cursor: pointer;
+transition: opacity 0.15s,
+box-shadow 0.15s;
+margin-bottom: 20px;
+}
+
+.btn:hover{
+opacity: 0.8;
+box-shadow: 3px 3px 3px rgba(231, 37, 237, 0.162);
+transform: translate3d(3px,3px,-3px);
+}
+
+.question{
+    font-family: arial;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.see{
+    font-family: arial;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.link{
+    font-family: arial;
+    color: blue;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+   
+.new{
+    font-size: 13px;
+    color: red;
+    font-family: arial;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.book{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.charged{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.rate{
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.mac{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+} 
+.buy{
+background-color: blue;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 16px;
+padding-right: 15px;
+border: 1px solid blue;
+border-radius: 18px;
+color: white;
+cursor: pointer;
+font-weight: bold;
+font-size: 16px;
+margin-bottom: 8px;
+transition: opacity 0.15s,
+box-shadow 0.15s;
+}
+.buy:hover{
+     opacity: 0.8;
+box-shadow: 3px 3px 3px rgba(43, 20, 249, 0.5);
+} 
+
+.amount{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.usd{
+    color:rgb(96, 96, 96) ;  
+    font-size: 16px; 
+}
+.offer{
+    color: green;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.after{
+    color:rgb(96, 96, 96) ;  
+    margin-bottom: 30px;
+}
+.red{
+    color: red;
+    
+}
+.free{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.code{
+    color:rgb(96, 96, 96) ;   
+}
+.dev{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.here{
+margin-bottom: 30px;
+}
+.chp{
+color: blue;
+}
