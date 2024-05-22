@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display block</title>
+    </head>
+    <body>
+       
+        <input type="text" placeholder="Name" class="name">
+        <input type="'text" placeholder="Email" class="email">
+        <div class="align">
+        <p>
+            Thanks for chatting with our customer support. Would 
+            you like to take our quick survey&quest;
+        </p>
+        <button class="yes">Yes</button>
+        <button class="no">No</button>
+         </div>
+        <img class="google" src="Google.svg">
+
+    </body>
+    <style>
+       .name{
+            width:100px;
+            height:15px;
+            display:block;
+            margin-bottom:10px;
+       }
+       .email{
+        width:100px;
+        height:15px;
+        display:block;
+       }
+       p{
+        display:inline-block;
+        width:200px;
+       }
+       .yes,.no{
+       
+        margin-left:10px;
+        display:block;
+       }
+       .align{
+        display:flex;
+        align-items: center;
+        
+       }
+       .google{
+        display: block;
+        align-items: center;
+       }
+    </style>
+</html>
