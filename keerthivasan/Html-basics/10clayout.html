@@ -7,18 +7,50 @@
 
 <body>
     <div>
-        <div>
+        <div class="image-div">
             <img class="photo1" src="photos/vlog1.png">
         </div>
-        <div>
+        <div class="content-div">
             <p class="video-title">வித விதமா ரக ரகமா Shopping &#128514; |South Korea Ep-7 | Vj Siddhu Vlogs</p>
             <p class="owner-name">Vj Siddhu Vlogs <span class="check">&#10003;</span></p>
+            <p class="view">126k views &#x2022; 1 hour ago </p>
         </div>
+        <div class="preview-two">
+            <div class="image-div">
+                <img class="photo1" src="photos/vlog2.png">
+            </div>
+            <div class="content-div">
+                <p class="video-title"> &#128510; Entering into the Jurassic Park &#128509; | Indian Bikes Driving 3d
+                </p>
+                <p class="owner-name">Moto Vlogs <span class="check">&#10003;</span></p>
+                <p class="view">196k views &#x2022; 2 hour ago </p>
+            </div>
+            <div class="preview-three">
+                <div class="image-div">
+                    <img class="photo1" src="photos/parking.png">
+                </div>
+                <div class="content-div">
+                    <p class="video-title">Parking - Original Score | Harish Kalyan | Indhuja Ravichandran | Sam C.S |
+                        Ramkumar Balakrishnan</p>
+                    <p class="owner-name">Think Music <span class="check">&#10003;</span></p>
+                    <p class="view">528k views &#x2022; 5 months ago </p>
+                </div>
+
 </body>
 <style>
+    .image-div {
+        display: inline-block;
+    }
+
     .photo1 {
         width: 350px;
         height: 200px;
+    }
+
+    .content-div {
+        display: inline-block;
+        margin-left: 15px;
+        vertical-align: top;
     }
 
     .video-title {
@@ -29,12 +61,33 @@
 
     .owner-name {
         color: gray;
-        font-size: small;
+        font-size: 14px;
     }
 
     .check {
-        background-color: gray;
+        background-color: rgb(128, 128, 128);
         color: white;
+        border-radius: 8px;
+        font-size: 10px;
+        padding: 2px 3px 2px 3px;
+        margin-left: 5px;
+
+    }
+
+    .reach-div {
+        display: inline-block;
+
+    }
+
+    .view {
+        color: gray;
+        font-size: 14px;
+    }
+
+    .preview-two,
+    .preview-three {
+        margin-top: 15px;
+
     }
 </style>
 
