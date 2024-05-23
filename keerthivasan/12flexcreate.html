@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Design Flexbox</title>
+
+</head>
+
+
+
+<body>
+    <div class="main" style="display:flex;
+        border-style:solid;
+        border-width:0.01px;
+        border-color:rgb(128, 128, 128);
+        border-radius:5px;
+        
+        width:300px;
+        flex-direction:column;
+        transition:box-shadow 1s;
+       
+
+        ">
+
+        <div style="display:flex;
+       
+        align-items:center;
+        justify-content:space-between;
+        width:100%;">
+            <p style="margin-left:3px;">Home</p>
+
+            <button style="background-color: rgb(10, 102, 194);
+            margin-right:10px;
+            color:white;
+            width:35px;
+            height:20px;
+            border-radius:10px;
+           
+            
+            
+           
+
+         border:none;">14</button>
+        </div>
+
+        <div class="2nd" style="
+        align-items:center;
+        display:flex;
+        justify-content:space-between;
+        width:100%;">
+            <p style="margin-left:3px;">Notifications</p>
+
+            <button style="background-color: rgb(10, 102, 194);
+            margin-right:10px;
+            color:white;
+            width:35px;
+            height:20px;
+            border-radius:10px;
+           
+            
+            
+           
+
+         border:none;">3</button>
+        </div>
+
+        <div class="3nd" style="
+        align-items:center;
+        display:flex;
+        justify-content:space-between;
+        width:100%;">
+            <p style="margin-left:3px;">Messages</p>
+
+            <button style="background-color: rgb(10, 102, 194);
+            margin-right:10px;
+            color:white;
+            width:35px;
+            height:20px;
+            border-radius:10px;
+           
+            
+            
+           
+
+         border:none;">5</button>
+        </div>
+    </div>
+
+    <div class="search">
+        <div class="home">
+            Home
+        </div>
+        <div class="searchbar">
+            <input class="search-text" type="text" placeholder="Search">
+        </div>
+        <div class="download">
+            <button class="download-button">Download</button>
+
+        </div>
+</body>
+<style>
+    .main {
+        transition: box-shadow 1s;
+        cursor: pointer;
+    }
+
+    .main:hover {
+        box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.5);
+    }
+
+    .search {
+        display: flex;
+        background-color: rgb(142, 82, 198);
+        border-style: solid;
+        height: 50px;
+        border: none;
+
+        justify-content: space-between;
+        align-items: center;
+
+        flex: 1;
+        margin-top: 100px;
+
+    }
+
+    .home {
+        color: white;
+        padding-left: 35px;
+
+    }
+
+    .searchbar {
+        display: flex;
+        flex: 1;
+
+        justify-content: center;
+
+    }
+
+    .search-text {
+        background-color: white;
+        width: 60%;
+        height: 30px;
+        border-radius: 30px;
+        padding-left: 20px;
+    }
+
+    .download {
+        display: flex;
+        width: 100px;
+    }
+
+    .download-button {
+        color: white;
+        background-color: rgb(142, 82, 198);
+        height: 30px;
+        margin-left: 15px;
+        border-color: white;
+    }
+</style>
+
+</html>
