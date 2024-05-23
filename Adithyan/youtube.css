@@ -1,10 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 .thumbnail{
 width: 300px;
+display: block;
+}
+p{
+    font-family: "Roboto",arial;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .search-bar{
+    display: block;
     font-size: 20px;
     border: 1px solid gray;
     border-radius: 5px;
     margin-bottom: 30px;
+}
+.video-preview{
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+}
+.video-preview-2{
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+}
+.video-title{
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+.thumbnail-2{
+    width: 300px;
+    display: block;
+}
+.channel-pic{
+    display: inline-block;
+    width: 50px;
+   vertical-align: top;
+   margin-top: 5px;
+}
+
+.video-info{
+    display: inline-block;
+    width: 200px;
+}
+.channel-dp{
+    width: 40px;
+    border-radius: 50px;
+}
+.thumbnail-row{
+    margin-bottom: 12px;
+}
+.author,.video-stats{
+    font-size: 12px;
+    color: rgb(96,96,96);
+}
+.author{
+    margin-bottom: 5px;
 }
