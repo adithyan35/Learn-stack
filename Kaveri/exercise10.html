@@ -3,39 +3,454 @@
   <title>Nested Layouts</title>
   <head>
 <style>
+  .main-div{
+   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+   width: 250px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+  }
+  .picture-div{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    
+  }
   .picture{
     width: 40px;
     border-radius: 50%;
+    display: inline;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .p-div{
+    display: inline-block;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    vertical-align: middle;
+
   }
   .p1{
     font-size: 12px;
     font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
   }
   .p2{
     font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+  }
+  .p3{
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+  }
+  .button-div{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 80px;
+    
+  }
+  .button{
+    background-color: rgb(5, 98, 236);
+    color: white;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 3px; 
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 </style>
-  </head>
+</head>
   <body>
-    <div>
-      <div>
+    <div class="main-div">
+
+      <div class="picture-div">
         <img  class="picture" src="thumbnails/dog1.jpeg">
       </div>
-      <div>
-       <p class="p1">Oliver</p>
-      </div>
-      <div>
-        <p class="p2">the cat</p>
-      </div>
-      <div>
-        <p class="p3">Popular</p>
+
+      <div class="p-div">
+
+        <div>
+          <p class="p1">Oliver</p></div>
+        <div><p class="p2">the cat</p></div>
+        <div><p class="p3">Popular</p></div>
+        
       </div>
 
-      <div>
+      <div class="button-div">
         <button class="button">Follow</button>
       </div>
-     
     </div>
   </body>
 </html>
+<br>
+<!-- --------------------------------------- -->
+<br>
+<style>
+  .main-div0{
+   /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); */
+   width: 250px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+  }
+  .picture-div{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    
+  }
+  .picture{
+    width: 40px;
+    border-radius: 50%;
+    display: inline;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .p-div{
+    display: inline-block;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    vertical-align: middle;
+
+  }
+  .p1{
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+  }
+  .p2{
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+  }
+  .p3{
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+  }
+  .button-div{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 80px;
+    
+  }
+  .button{
+    background-color: rgb(5, 98, 236);
+    color: white;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 3px; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  
+
+</style>
+  </head>
+  <body>
+    <div class="main-div0">
+
+      <div class="picture-div">
+        <img  class="picture" src="thumbnails/dog1.jpeg">
+      </div>
+
+      <div class="p-div">
+
+        <div>
+          <p class="p1">Oliver</p></div>
+        <div><p class="p2">the cat</p></div>
+        <div><p class="p3">Popular</p></div>
+        
+      </div>
+
+      <div class="button-div">
+        <button class="button">Follow</button>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- ---------------------------------------------------- -->
+<style>
+  .main-div1{
+   /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); */
+   width: 250px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   
+  }
+  .picture-div{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    
+  }
+  .picture{
+    width: 40px;
+    border-radius: 50%;
+    display: inline;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .p-div{
+    display: inline-block;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    vertical-align: middle;
+
+  }
+  .p1{
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+  }
+  .p2{
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+  }
+  .p3{
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+  }
+  .button-div{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 80px;
+    
+  }
+  .button{
+    background-color: rgb(5, 98, 236);
+    color: white;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 3px; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+</style>
+    <div class="main-div1">
+
+      <div class="picture-div">
+        <img  class="picture" src="thumbnails/dog2.jpeg">
+      </div>
+
+      <div class="p-div">
+
+        <div>
+          <p class="p1">Oliver</p></div>
+        <div><p class="p2">the cat</p></div>
+        <div><p class="p3">Popular</p></div>
+        
+      </div>
+
+      <div class="button-div">
+        <button class="button">Follow</button>
+      </div>
+    </div>
+
+<!-- --------------------------------------- -->
+
+    <style>
+      .main-div2{
+       /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); */
+       width: 250px;
+       padding-top: 10px;
+       padding-bottom: 10px;
+      }
+      .picture-div{
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+        
+      }
+      .picture{
+        width: 40px;
+        border-radius: 50%;
+        display: inline;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .p-div{
+        display: inline-block;
+        /* margin-top: 10px;
+        margin-bottom: 10px; */
+        vertical-align: middle;
+    
+      }
+      .p1{
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 5px;
+      }
+      .p2{
+        font-size: 12px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 5px;
+      }
+      .p3{
+        font-size: 12px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 5px;
+      }
+      .button-div{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 80px;
+        
+      }
+      .button{
+        background-color: rgb(5, 98, 236);
+        color: white;
+        border: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 3px; 
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    </style>
+            <div class="main-div2">
+    
+          <div class="picture-div">
+            <img  class="picture" src="thumbnails/dog3.jpeg">
+          </div>
+    
+          <div class="p-div">
+    
+            <div>
+              <p class="p1">Oliver</p></div>
+            <div><p class="p2">the cat</p></div>
+            <div><p class="p3">Popular</p></div>
+            
+          </div>
+    
+          <div class="button-div">
+            <button class="button">Follow</button>
+          </div>
+        </div>
+<!-- /* ------------------------------------------------------------   */ -->
+        <style>
+          .main-div2{
+           /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); */
+           width: 250px;
+           padding-top: 10px;
+           padding-bottom: 10px;
+          }
+          .picture-div{
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+            
+          }
+          .picture{
+            width: 40px;
+            border-radius: 50%;
+            display: inline;
+            margin-top: 0px;
+            margin-bottom: 0px;
+          }
+          .p-div{
+            display: inline-block;
+            /* margin-top: 10px;
+            margin-bottom: 10px; */
+            vertical-align: middle;
+        
+          }
+          .p1{
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 5px;
+          }
+          .p2{
+            font-size: 12px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 5px;
+          }
+          .p3{
+            font-size: 12px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 5px;
+          }
+          .button-div{
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 80px;
+            
+          }
+          .button{
+            background-color: rgb(5, 98, 236);
+            color: white;
+            border: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 3px; 
+            margin-top: 0px;
+            margin-bottom: 0px;
+          }
+        </style>
+            <div class="main-div2">
+        
+              <div class="picture-div">
+                <img  class="picture" src="thumbnails/dog3.jpeg">
+              </div>
+        
+              <div class="p-div">
+        
+                <div>
+                  <p class="p1">Oliver</p></div>
+                <div><p class="p2">the cat</p></div>
+                <div><p class="p3">Popular</p></div>
+                
+              </div>
+        
+              <div class="button-div">
+                <button class="button">Follow</button>
+              </div>
+            </div>
+
 
