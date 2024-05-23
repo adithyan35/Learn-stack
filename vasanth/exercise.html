@@ -8,9 +8,9 @@
 
 <body>
     <!-- <div class="tweetDiv"> -->
-        <img class="imageDiv" src="../CSS/image.jpg!f305cw">
-        <input type="text" class="paragraphDiv" placeholder="What's happening?">
-        <button class="twitterButton">Tweet</button>
+    <img class="imageDiv" src="../CSS/image.jpg!f305cw">
+    <input type="text" class="paragraphDiv" placeholder="What's happening?">
+    <button class="twitterButton">Tweet</button>
     <!-- </div> -->
     <style>
         /* .tweetDiv {
@@ -37,7 +37,8 @@
             border: none;
             width: 300px;
         }
-        .twitterButton{
+
+        .twitterButton {
             background-color: rgb(29, 155, 240);
             color: white;
             border: none;
@@ -50,7 +51,8 @@
             font-weight: bold;
             vertical-align: middle;
         }
-        .searchBar{
+
+        .searchBar {
             /* background-color: rgb(245, 245, 245); */
             border: 1px solid rgb(223, 225, 229);
             border-radius: 25px;
@@ -66,7 +68,7 @@
             font-weight: bold;
         }
 
-        .textLabel{
+        .textLabel {
             font-size: 16px;
             color: rgb(96, 96, 96);
             font-style: arial;
@@ -78,7 +80,8 @@
             padding-top: 10px;
             /* vertical-align: middle; */
         }
-        .textBox{
+
+        .textBox {
             padding-top: 10px;
             padding-bottom: 10px;
             padding-left: 30px;
@@ -92,7 +95,8 @@
             border-style: solid;
             color: rgb(100, 100, 100);
         }
-        .joinButton{
+
+        .joinButton {
             background-color: rgb(29, 155, 240);
             color: white;
             border: none;
@@ -106,11 +110,13 @@
             font-weight: bold;
             vertical-align: middle;
         }
-        p{
+
+        p {
             font-family: arial;
             color: rgb(100, 100, 100);
         }
-        .container{
+
+        .container {
             margin-left: 10px;
             margin-bottom: 20px;
             background-color: white;
@@ -119,24 +125,28 @@
             width: 500px;
             margin-top: 20px;
         }
-        .exerciseDiv{
+
+        .exerciseDiv {
             background-color: black;
             width: 100px;
             height: 100px;
             border-radius: 50%;
         }
-        .recreateDiv{
+
+        .recreateDiv {
 
             margin-left: 20px;
             margin-top: 20px;
             /* border: 1px solid rgb(0, 0, 0); */
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(150px,150px));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+            gap: 2rem;
+            border-radius: 2px;
             /* vertical-align: top; */
 
         }
-        .imageRecreate{
+
+        .imageRecreate {
             object-fit: cover;
             margin-left: 5px;
             margin-right: 5px;
@@ -144,19 +154,22 @@
             width: 93%;
             /* height: 20%; */
             margin-bottom: 10px;
+            border-radius: 2px;
         }
-        .recreateText{
+
+        .recreateText {
             font-weight: bold;
             font-size: 16px;
             color: black;
             font-family: arial;
-            display: inline!important;
+            display: inline !important;
             margin-top: 10px;
             margin-left: 10px;
-            margin-bottom: 0!important;
-            margin-top: 0!important;
+            margin-bottom: 0 !important;
+            margin-top: 0 !important;
         }
-        .recreateButton{
+
+        .recreateButton {
             background-color: rgb(29, 155, 240);
             color: white;
             border: none;
@@ -171,57 +184,175 @@
             /* margin-bottom: 10px; */
             margin-right: 10px;
         }
-        .recreateText1{
-            margin-left: 10px;
-            margin-bottom: 0!important;
-            margin-top: 0!important;
+
+        .recreateText1 {
+            margin-left: 5px;
+            margin-bottom: 0 !important;
+            margin-top: 10px !important;
+            display: flex;
+            justify-content: space-evenly;
         }
-        .secondDiv{
+
+        .secondDiv {
             display: grid;
             grid-template-rows: subgrid;
             grid-row: span 5;
-            width: 150px;
+            width: 165px;
             background-color: white;
             border: 1px solid white;
             box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
             margin-left: 10px;
             vertical-align: top;
+            border-radius: 5px;
+        }
+
+        .imageRecreate1 {
+            object-fit: cover;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 5px;
+            width: 30px;
+            height: 30px;
+            margin-bottom: 10px;
+            border-radius: 50px;
+        }
+
+        .mutualDiv {
+            display: flex;
+            justify-content: space-evenly;
         }
     </style>
 
     <input class="searchBar" type="text" placeholder="Search Google or type a URL">
-<div class="container">
-    <label class="textLabel">Email</label>
-    <!-- <div> -->
+    <div class="container">
+        <label class="textLabel">Email</label>
+        <!-- <div> -->
         <input class="textBox" type="text">
-    <!-- </div> -->
-    <p>
-        By clicking Agree & Join, you agree to the Privacy Policy
-    </p>
-    <button class="joinButton"> Agree & Join</button>
-</div>
-<div class="exerciseDiv"></div>
-<div class="recreateDiv">
-    <div class="secondDiv">
-    <img class="imageRecreate" src="./Youtube/ahmedabad.jpg" alt="nope" srcset="">
-<p class="recreateText">Oliver</p>
-<p class="recreateText1">2 mutual friends</p>
-<button class="recreateButton">Add Friend</button>
+        <!-- </div> -->
+        <p>
+            By clicking Agree & Join, you agree to the Privacy Policy
+        </p>
+        <button class="joinButton"> Agree & Join</button>
     </div>
-    <div class="secondDiv">
-        <img class="imageRecreate" src="./Youtube/indiagate.avif" alt="nope" srcset="">
-    <p class="recreateText">Oliver</p>
-    <p class="recreateText1">2 mutual friends</p>
-    <button class="recreateButton">Add Friend</button>
+    <div class="exerciseDiv"></div>
+    <div class="recreateDiv">
+        <div class="secondDiv">
+            <img class="imageRecreate" src="./Youtube/ahmedabad.jpg" alt="nope" srcset="">
+            <p class="recreateText">Oliver</p>
+            <div class="mutualDiv">
+                <img class="imageRecreate1" src="./Youtube/image1.webp" alt="nope" srcset="">
+                <p class="recreateText1">
+                    2 mutual friends
+                </p>
+            </div>
+            <button class="recreateButton">Add Friend</button>
+        </div>
+        <div class="secondDiv">
+            <img class="imageRecreate" src="./Youtube/indiagate.avif" alt="nope" srcset="">
+            <p class="recreateText">Oliver</p>
+            <div class="mutualDiv">
+                <img class="imageRecreate1" src="./Youtube/image1.webp" alt="nope" srcset="">
+                <p class="recreateText1">
+                    2 mutual friends
+                </p>
+            </div>
+            <button class="recreateButton">Add Friend</button>
         </div>
         <div class="secondDiv">
             <img class="imageRecreate" src="./Youtube/image1.webp" alt="nope" srcset="">
-        <p class="recreateText">Oliver</p>
-        <p class="recreateText1">2 mutual friends</p>
-        <button class="recreateButton">Add Friend</button>
+            <p class="recreateText">Oliver</p>
+            <div class="mutualDiv">
+                <img class="imageRecreate1" src="./Youtube/image1.webp" alt="nope" srcset="">
+                <p class="recreateText1">
+                    2 mutual friends
+                </p>
             </div>
-            
-</div>
+            <button class="recreateButton">Add Friend</button>
+        </div>
+    </div>
+    <!-- Nested Layout -->
+
+    <div class="layoutDiv">
+        <div class="imageLayoutDiv">
+            <img class="imageLayout" src="./Youtube/indiagate.avif" alt="nope" srcset="">
+        </div>
+        <div>
+            <p class="layoutText">Oliver</p>
+
+
+            <!-- <div class="mutualLayout"> -->
+            <!-- <img class="imageLayout1" src="./Youtube/image1.webp" alt="nope" srcset=""> -->
+            <p class="layoutText1">
+                2 mutual friends
+            </p>
+            <p class="layoutText1"> Hi</p>
+        </div>
+        <div class="layoutButtonDiv">
+            <button class="layoutButton">Add Friend</button>
+        </div>
+    </div>
+    <style>
+        .imageLayout {
+            object-fit: cover;
+            margin-left: 5px; 
+            margin-right: 5px;
+            width: 90%;
+            height: 90%;
+            margin-bottom: 10px;
+            border-radius: 50%;
+        }
+
+        .layoutDiv {
+            display: flex;
+            justify-content: space-evenly;
+            width: 50%;
+            height: 30%;
+            margin-top: 30px;
+        }
+
+        .layoutText {
+            margin-top: 30px!important;
+            margin-bottom: 0 !important;
+        }
+        .imageLayoutDiv{
+            width: 30%;
+        }
+
+        
+        .layoutText1{
+            /* display: flex; */
+            margin-bottom: 2px !important;
+            margin-top: 2px !important;
+            align-content: center;
+        }
+
+        .layoutButton {
+            background-color: rgb(29, 155, 240);
+            color: white;
+            border: none;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: arial;
+            margin-left: 10px;
+            /* margin-bottom: 10px; */
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .layoutButtonDiv {
+            justify-content: center;
+
+            padding: 25px;
+
+            /* display: flex; */
+        }
+    </style>
+
+
 </body>
 
 </html>
