@@ -6,45 +6,58 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
 <style>
+  .video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+  }
   p{
     font-family: Roboto, Arial;
     margin-top: 0;
     margin-bottom: 0;
   }
   .thumbnail{
-    width: 300px;
+    width: 100%;
   }
   .search-bar{
    display:block;
   }
+
   /* .para{
     width: 250px;
   } */
-.video-preview{
+/* .video-preview{
   width: 300px;
   display: inline-block;
   margin-right: 15px;
-}
-.video-preview1{
+} */
+/* .video-preview1{
   width: 300px;
   display: inline-block;
-  /* position: absolute; */
- vertical-align: top;
-}
-.channel-pic{
-  display: inline-block;
-  width: 50px;
   vertical-align: top;
-}
+} */
+
 
 .video-title{
   margin-top: 0;
-  width: 250px;
+  width: 200px;
   font-size: 14px;
   /* bold=700 */
   font-weight: 700;
   line-height: 20px;
   margin-bottom: 12px;
+}
+/* //Grid applied here */
+.video-info-grid{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  
+}
+.channel-pic{
+  display: inline-block;
+  width: 50px;
+  vertical-align: top;
 }
 .video-info{
   display: inline-block;
@@ -70,43 +83,123 @@
   </head>
   <body>
     <input class="search-bar" type="text" placeholder="Search"><br>
+
+    <div class="video-grid">
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+        </div>
+      <div class="video-info-grid">
+        <div class="channel-pic">
+            <img class="img" src="thumbnails/logo.jpeg">
+        </div>
+        <div class="video-info">
+            <p class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+            <p class="video-author">Marques Brownlee </p>
+            <p class="video-status">3.4M views &#183; 6 months ago</p>
+        </div>
+        </div>
+      </div>
+      
+      
+      
+          
+      <div class="video-preview1">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
+        </div>
+      <div class="video-info-grid">
+        <div class="channel-pic">
+            <img class="img" src="thumbnails/logo1.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">Try Not To Laugh Challenge #9</p>
+          <p class="video-author">Markipller </p>
+          <p class="video-status">19M views &#183; 4 years ago</p>
+        </div>
+        </div>
+      </div>
+      
+      
+      
+      
+          
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+        </div>
+      <div class="video-info-grid">
+        <div class="channel-pic">
+            <img class="img" src="thumbnails/logo.jpeg">
+        </div>
+        <div class="video-info">
+            <p class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+            <p class="video-author">Marques Brownlee </p>
+            <p class="video-status">3.4M views &#183; 6 months ago</p>
+        </div>
+        </div>
+      </div>
+      
+      
+      
+          
+      <div class="video-preview1">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
+        </div>
+      <div class="video-info-grid">
+        <div class="channel-pic">
+            <img class="img" src="thumbnails/logo1.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">Try Not To Laugh Challenge #9</p>
+          <p class="video-author">Markipller </p>
+          <p class="video-status">19M views &#183; 4 years ago</p>
+        </div>
+        </div>
+      </div>
+      
+      
+      
+      
+          
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+        </div>
+      <div class="video-info-grid">
+        <div class="channel-pic">
+            <img class="img" src="thumbnails/logo.jpeg">
+        </div>
+        <div class="video-info">
+            <p class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+            <p class="video-author">Marques Brownlee </p>
+            <p class="video-status">3.4M views &#183; 6 months ago</p>
+        </div>
+        </div>
+      </div>
+      
+      
+      
+          
+      <div class="video-preview1">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
+        </div>
+      <div class="video-info-grid">
+        <div class="channel-pic">
+            <img class="img" src="thumbnails/logo1.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">Try Not To Laugh Challenge #9</p>
+          <p class="video-author">Markipller </p>
+          <p class="video-status">19M views &#183; 4 years ago</p>
+        </div>
+        </div>
+      </div>
+    </div>
     
-<div class="video-preview">
-  <div class="thumbnail-row">
-    <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
-  </div>
-<div>
-  <div class="channel-pic">
-      <img class="img" src="thumbnails/logo.jpeg">
-  </div>
-  <div class="video-info">
-      <p class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
-      <p class="video-author">Marques Brownlee </p>
-      <p class="video-status">3.4M views &#183; 6 months ago</p>
-  </div>
-  </div>
-</div>
-
-
-
-    
-<div class="video-preview1">
-  <div class="thumbnail-row">
-    <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
-  </div>
-<div>
-  <div class="channel-pic">
-      <img class="img" src="thumbnails/logo1.jpeg">
-  </div>
-  <div class="video-info">
-    <p class="video-title">Try Not To Laugh Challenge #9</p>
-    <p class="video-author">Markipller </p>
-    <p class="video-status">19M views &#183; 4 years ago</p>
-  </div>
-  </div>
-</div>
-
-
 
 </body>
 </html>
