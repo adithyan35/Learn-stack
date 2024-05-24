@@ -1,0 +1,113 @@
+*{
+    padding: 3px;
+    margin: 0;
+}
+.port{
+    background-image: linear-gradient(to right, rgb(37, 240, 169) , rgb(231, 31, 31))
+}
+.list{
+    display: flex;
+    justify-content:flex-end ;
+    
+
+}
+.nav-1{
+    
+    justify-content:space-evenly;
+    margin-right: 30px;
+
+}
+li:hover{
+    font-size: 20px;
+    transform: translate3d(3px, 3px, 3px);
+}
+a{
+    text-decoration: none;
+    transition: color,0.5s;
+}
+a:hover{
+    color: orange;
+}
+
+
+li{
+    list-style-type: none !important;
+    transition: font-size,transform , 0.5s;
+}
+.profile-pic{
+    display: flex;
+    justify-content: center;
+}
+h2,h3{
+    text-align: center;
+    font-family: arial;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition:font-size,color,0.5s ;
+
+}
+h3:hover{
+    font-size: 25px;
+    color: red;
+       
+}
+h2:hover{
+    font-size: 30px;
+    color:darkred;
+}
+.dp{
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    justify-content: center;
+    border :2px solid red
+}
+.dp:hover{
+    box-shadow: 5px 5px 5px rgb(61, 247, 247);
+    transform: translate3d(5px, 5px, 5px);
+}
+.project{
+    display: flex;
+    justify-content: center;
+}
+
+.pro-1{
+    width: 500px;
+    display: grid;
+    cursor: pointer;
+    
+   
+}
+.pro-1:hover{
+    box-shadow: 10px 10px 10px rgb(129, 127, 127);
+    transform: translate3d(5px, 5px, 5px);
+}
+.lang{
+    text-align: center;
+    margin-bottom: 3px;
+    line-height: 35px;
+    font-size: 18px;
+    font-style: italic;
+    color: crimson;
+}
+.detail{
+
+    text-align: center;
+    font-size: 25px;
+    font-family:  'Times New Roman';
+}
+.description-1{
+    text-align: center;
+    font-size: 25px;
+}
+h4{
+    text-align: center;
+    padding-top: 20px;
+}
+.role{
+    text-align: left;
+    margin-left: 26%;
+}
