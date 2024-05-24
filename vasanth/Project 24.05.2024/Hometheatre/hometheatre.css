@@ -1,0 +1,14 @@
+
+
+.imageDivMain{
+    display: flex;
+}
+.imageUl{
+    list-style: none;
+    width: 100px;
+}
+.listItem{
+    display: block;
+    max-width: 50%;
+    line-height: 2rem;
+}
