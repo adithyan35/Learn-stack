@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Landing Page
+    </title>
+</head>
+
+<body>
+    <div class="top-nav">
+        <div class="left_section">
+            <div>
+                <img class="items" src="photos/Google-logo.png" alt="google logo">
+            </div>
+
+            <div>
+                <div class="dropdown-1">
+                    <select class="products" name="products" id="products">
+                        <option value="Products">Products</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Books">Books</option>
+                        <option value="pills">Pills</option>
+                        <option value="Gadgets">Gadgets</option>
+                        <option value="Hardwares">Hardwares</option>
+                    </select>
+                </div>
+
+                <div class="dropdown-2">
+                    <select class="products" name="products" id="products">
+                        <option value="Learning Center">Learning Center</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Books">Books</option>
+                        <option value="pills">Pills</option>
+                        <option value="Gadgets">Gadgets</option>
+                        <option value="Hardwares">Hardwares</option>
+                    </select>
+
+                </div>
+
+                <div class="dropdown-3">
+                    <select class="products" name="products" id="products">
+                        <option value="About">About</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Books">Books</option>
+                        <option value="pills">Pills</option>
+                        <option value="Gadgets">Gadgets</option>
+                        <option value="Hardwares">Hardwares</option>
+                    </select>
+
+                </div>
+
+                <div class="dropdown-4">
+                    <select class="products" name="products" id="products">
+                        <option value="Pricing">Pricing</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Books">Books</option>
+                        <option value="pills">Pills</option>
+                        <option value="Gadgets">Gadgets</option>
+                        <option value="Hardwares">Hardwares</option>
+                    </select>
+
+                </div>
+
+                <div class="dropdown-5">
+                    <select class="products" name="products" id="products">
+                        <option value="Watch Demo">Watch Demo</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Books">Books</option>
+                        <option value="pills">Pills</option>
+                        <option value="Gadgets">Gadgets</option>
+                        <option value="Hardwares">Hardwares</option>
+                    </select>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="right_section">
+            <div class="login-button">
+                <button class="login">Login</button>
+            </div>
+            <div class="start-button">
+                <button class="start">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="headline">
+        <p class="para">Watch our brand new series, Fix My Setup, for easy hacks to make you lokk and feel better in
+            your next video.&nbsp;<span class="arrow">&rarr;</span> </p>
+
+    </div>
+
+    <div class="last">
+        <div class="center-part">
+            <div class="content">
+                <p class="content-1">One of the Craziest content I ever seen</p>
+
+            </div>
+            <div class="second-content">
+                <p class="content-2">It hels marketers create and manage videos, hotst webinars, generate leads, and
+                    measure video performance--all in one place.</p>
+
+            </div>
+
+            <div class="button">
+                <button class="explore">Explore plans</button>
+            </div>
+        </div>
+
+        <div class="video-part">
+            <video width="360" height="240" controls>
+                <source src="videos/mov_bbb.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+
+    <style>
+        .top-nav {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .items {
+            width: 100px;
+            height: 30px;
+        }
+
+        .dropdown-1,
+        .dropdown-2,
+        .dropdown-3,
+        .dropdown-4,
+        .dropdown-5 {
+            display: inline-flex;
+            margin-left: 20px;
+
+
+        }
+
+        .products {
+            border: none;
+
+        }
+
+        .login {
+            background-color: white;
+            border-color: azure;
+            height: 28px;
+            width: 70px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .start {
+            background-color: rgb(10, 192, 194);
+            border-color: azure;
+            color: white;
+            border-color: black;
+            height: 28px;
+            width: 130px;
+            margin-left: 20px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .left_section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px 30px;
+        }
+
+        .right_section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px 30px;
+        }
+
+        .headline {
+            display: flex;
+            background-color: blueviolet;
+            justify-content: center;
+            color: white;
+        }
+
+        .arrow {
+
+            font-size: larger;
+
+        }
+
+        .para {
+            font-weight: bold;
+        }
+
+        .content {
+            display: flex;
+        }
+
+        .content-1 {
+            font-size: xx-large;
+            color: black;
+            font-weight: bold;
+        }
+
+        .explore {
+            width: 150px;
+            height: 50px;
+            color: white;
+            background-color: rgb(32, 32, 222);
+            border: none;
+            border-radius: 10px;
+        }
+
+        .content,
+        .second-content {
+            margin-top: 20px;
+        }
+
+        .button {
+            margin-top: 40px;
+            margin-bottom: 40px
+        }
+
+        .last {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 80px;
+            background-color: rgb(135, 214, 243);
+            bottom: 0px;
+
+        }
+
+        .center-part,
+        .video-part {
+            margin-left: 190px;
+            margin-right: 190px;
+        }
+
+        .center-part {
+            width: 300px;
+        }
+    </style>
+</body>
+
+</html>
