@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <!-- <ul id="menu">
+
+            <li>Home</li>
+            <li>About</li>
+            <li>Blog</li>
+
+        </ul> -->
+
+        <script> 
+            // insertAdjacentHTML() method:
+            // beforebegin,afterbegin,beforeend,afterend
+            // let menu = document.getElementById("menu");
+            // menu.insertAdjacentHTML("afterend","<li>Content</li>");
+
+
+            //replaceChild() method:
+            //Sysntax:parentNode.replaceChild(newChild,oldChild);
+
+
+            //cloneNode() method:
+            // let menu = document.getElementById("menu");
+            // let newNode=menu.cloneNode(true);
+            // console.log(newNode)
+
+            //removeChild() method
+            // let menu = document.getElementById("menu");
+            // menu.removeChild(menu.lastElementChild);
+            //              //(or)
+            // menu.removeChild(menu.firstElementChild);
+
+            //insertBefore() Method
+            // let menu = document.getElementById("menu");
+            // menu.insertBefore(newNode,menu.firstElementChild);
+         </script>
+
+
+         <!-- Attributes Methods -->
+
+     <!-- <input type="text" id="username" placeholder="username"> -->
+
+        <Script>
+           // let inputBox=document.getElementById("username");
+           // console.log(inputBox.attributes);
+
+           //getAttribute() method
+            // console.log(inputBox.getAttribute("type"));
+
+            //setAttribute() methid
+            // inputBox.setAttribute("class","user");
+            // console.log(inputBox);
+
+            //hasAttribute() method
+            // console.log(inputBox.hasAttribute("class"))
+
+            //removeAttribute() method
+            // inputBox.removeAttribute("placeholder");
+            // console.log("inputBox");
+        </Script>
+
+        <!-- Manipulating Element's Styles
+        Style Property -->
+        <input type="text" id="username" placeholder="username"
+         style="background-color:red; font-size: 20px;">
+    <script>
+        let inputBox = document.getElementById("username");
+        // console.log(inputBox.style.fontSize);
+        // inputBox.style.padding="10px";
+        // console.log(inputBox);
+
+        //CSS text
+        // inputBox.style.cssText="width:200px"; //only we can take this style
+        // console.log(inputBox);
+
+        // inputBox.style.cssText+="width:200px";  //it can take both inline styling and css text(both are concodinated)
+        // console.log(inputBox);
+
+        // inputBox.style.cssText+="width:200px;height:100px"; //we can add multiple styles in css text.
+        // console.log(inputBox);
+
+    </script>
+
+
+
+
+    </body>
+</html>
