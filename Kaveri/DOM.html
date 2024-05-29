@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-
-        </title>
+        <title>DOM</title>
+        <style>
+            /* This is for getcomputedstyle() method */
+            input{
+                background-color: yellow;
+                font-size: 12px;
+                width: 300px;
+            }
+        </style>
     </head>
     <body>
         <!-- <ul id="menu">
@@ -67,10 +73,13 @@
 
         <!-- Manipulating Element's Styles
         Style Property -->
-        <input type="text" id="username" placeholder="username"
-         style="background-color:red; font-size: 20px;">
+        <!-- <input type="text" id="username" placeholder="username"
+         style="background-color:red; font-size: 20px;"> -->
+
+         <input type="text" id="username" placeholder="username">
+         
     <script>
-        let inputBox = document.getElementById("username");
+        // let inputBox = document.getElementById("username");
         // console.log(inputBox.style.fontSize);
         // inputBox.style.padding="10px";
         // console.log(inputBox);
@@ -85,7 +94,16 @@
         // inputBox.style.cssText+="width:200px;height:100px"; //we can add multiple styles in css text.
         // console.log(inputBox);
 
-    </script>
+    //getcomputedstyle() method
+    let inputBox = document.getElementById("username");
+   // console.log(window.getComputedStyle(inputBox))
+                        //or
+    // console.log(window.getComputedStyle(inputBox).fontSize)
+                        //or
+    // console.log(window.getComputedStyle(inputBox).backgroundColor)                   
+                        //or
+    console.log(window.getComputedStyle(inputBox).width)
+</script>
 
 
 
