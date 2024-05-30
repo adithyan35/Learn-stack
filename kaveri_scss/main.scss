@@ -1,69 +1,94 @@
 
-@import './-resets';
-@import './variables';
+// @import './-resets';
+// @import './variables';
 
-//functions: inside the function we should metion the return values.
+// //functions: inside the function we should metion the return values.
 
-@function weight($weight-name){
-    @return map-get($font-weights, $weight-name)
-}
+// @function weight($weight-name){
+//     @return map-get($font-weights, $weight-name)
+// }
 
-@mixin flexCenter($direction){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
-}
-//we use @mixin here: (display theme) 
-@mixin theme($light-theme: true){
-    @if $light-theme{
-        background: lighten($primary-color,100%);
-        color: darken($text-color,100%);
-    }
-}
-@mixin mobile{
-    @media (max-width:$mobile){
-        @content;
-    }
-}
-
-
-
-body{
-    background: $primary-color;
-    color: $text-color; 
-}
-
-.main{
-    @include flexCenter(row);
-    width: 80% - 40%;
-    margin: 0 auto;
-
-#{&}__paragraph1{
-    font-weight: weight(bold);
-
-    &:hover{
-        color: pink;
-    }
-}
-//using @extend here:
-#{&}__paragraph2{
-    @extend .main__paragraph1;
-
-    &:hover{
-        color: $accent-color;
-    }
-}
-
-@include mobile{
-    flex-direction: column;
-}
-
-}
+// @mixin flexCenter($direction){
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: $direction;
+// }
+// //we use @mixin here: (display theme) 
+// @mixin theme($light-theme: true){
+//     @if $light-theme{
+//         background: lighten($primary-color,100%);
+//         color: darken($text-color,100%);
+//     }
+// }
+// @mixin mobile{
+//     @media (max-width:$mobile){
+//         @content;
+//     }
+// }
+// .main__paragraph2{
+//     color:($new-color);
+// }
+// .para3{
+//     color: $accent-color;
+// }
 
 
-//display theme
 
-.light{
-    @include theme($light-theme:true)
-}
+// body{
+//     background: $primary-color;
+//     color: $text-color; 
+// }
+
+// .main{
+//     @include flexCenter(row);
+//     width: 80% - 40%;
+//     margin: 0 auto;
+
+// #{&}__paragraph1{
+//     font-weight: weight(bold);
+
+//     &:hover{
+//         color: rgb(30, 6, 165);
+//     }
+// }
+// //using @extend here:
+// #{&}__paragraph2{
+//     @extend .main__paragraph1;
+
+//     &:hover{
+//         color: $accent-color;
+//     }
+// }
+
+// @include mobile{
+//     flex-direction: column;
+// }
+
+// }
+
+
+// //display theme
+
+// .light{
+//     @include theme($light-theme:true)
+// }
+// .nav{
+//     p{color: green;}
+//     .kill{
+//         p{color: orange;}
+//     }
+//     .low{
+//         h5{color: aquamarine;}
+//         ul{
+//             li{
+//                 color:blueviolet
+//             }
+//         }
+//     }
+// }
+
+// ---------------------------------------------------------------------------------
+
+
+
