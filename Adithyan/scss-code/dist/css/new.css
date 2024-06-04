@@ -1,0 +1,34 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  background-color: rgb(58, 153, 241);
+  font-family: "Roboto", sans-serif;
+}
+
+.welcome-card {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 40px;
+  border-radius: 5px;
+}
+
+.welcome-card h3 {
+  font-size: 25px;
+}
+
+.welcome-card p {
+  margin-top: 10px;
+  color: gray;
+}
+
+.welcome-card .btn {
+  margin-top: 10px;
+  background-color: rgb(58, 153, 241);
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: none;
+  color: #ffffff;
+}/*# sourceMappingURL=new.css.map */
