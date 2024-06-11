@@ -1,0 +1,99 @@
+/* custom properties (CSS variables) for the transition timing and rotation angle. */
+
+:root {
+    --timing: 400ms;
+    --rotation: 20deg;
+  }
+  
+/* This sets the color scheme to dark mode. */
+
+  html {
+    color-scheme: dark;
+  }
+  
+/* The body is a grid container, centered with place-content: center. It also sets a perspective for 3D effects. */
+
+  body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    perspective: 1000px;
+  }
+  
+  /* Ensures images do not exceed the container width. */
+
+  img {
+    max-width: 100%;
+  }
+  
+
+  /* The .hulk class is a 3D container with a fixed width and aspect ratio. On hover, it rotates on the X-axis by the defined rotation angle. */
+ 
+  .hulk {
+    width: 300px;
+    /* aspect-ratio: 9 / 15; */
+    /* background-image: url("HULK3.jpg"); */
+    /* position: relative; */
+    transform-style: preserve-3d;
+    transition: rotate var(--timing) ease;
+  }
+  
+  .hulk:hover {
+    rotate: x var(--rotation);
+  }
+  
+  .hulk::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    background-image: radial-gradient(circle, transparent 150px, black);
+    opacity: 0;
+    transition: opacity var(--timing);
+  }
+  
+  /* .hulk:hover::before {
+    opacity: 1;
+  } */
+  
+  .hulk::after {
+    content: "";
+    position: absolute;
+    inset: 80% 0.5rem 0.5rem;
+    translate: 0;
+    transform: translateZ(-100px);
+    background: black;
+    filter: blur(1rem);
+    z-index: 1;
+    transition: rotate var(--timing), translate var(--timing);
+  }
+  
+  /* .hulk:hover::after {
+    rotate: x calc(var(--rotation) * -1);
+    translate: 0 60px;
+  } */
+  
+  .bg-image {
+    position: absolute;
+    /* z-index: 100; */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position:  -150px center;
+  }
+  
+  .front-image {
+    scale: 1.125;
+    transform-origin: bottom;
+    opacity: 0;
+    /* z-index: 100; */
+    transition: var(--timing);
+  }
+  
+  .hulk:hover .front-image {
+    opacity: 1;
+    transform: translateY(-2rem) translateZ(-10px);
+    rotate: x calc(var(--rotation) * -1);
+  }
+  
+  
