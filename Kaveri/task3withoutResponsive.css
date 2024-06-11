@@ -1,0 +1,280 @@
+/* Reset some default styles for better cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+/* Styling for the header */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   }
+
+/* Shared styles for both left and right menus */
+.header .left-menu ul, .header .right-menu ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    
+}
+
+.header .left-menu ul li a, .header .right-menu ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+}
+
+.header .left-menu ul li a:hover, .header .right-menu ul li a:hover {
+ background-color: rgb(228, 228, 228); 
+ cursor: pointer; 
+}
+
+/* Specific styling for left and right menu sections */
+.left-menu ul {
+    margin-left: 0; /* Ensures alignment to the left */
+}
+
+.right-menu ul {
+    margin-right: 0; /* Ensures alignment to the right */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .left-menu ul, .header .right-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+.parent-div{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.div-2 {
+    background-color: rgb(245, 242, 242);
+     width: 230px;
+     padding: 10px 10px ;
+     border-radius: 2px;
+     margin-top: 50px;
+     cursor: pointer;
+     font-weight: bold;
+     transition: 0.5s;
+}
+.div-2:hover{
+  background-color: rgb(235, 234, 234);
+}
+
+.div-3{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 70px;
+    line-height: 60px;
+    font-weight: bold;
+}
+
+.search-bar{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 40%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 23%;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.all-btn{
+    border: none;
+    background-color: rgb(236, 234, 234);
+    margin:5px;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+.all-btn:hover{
+  cursor: pointer;
+  background-color:  rgb(211, 209, 209);
+}
+
+.btn-div{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-menu{
+  background-color: rgb(17, 119, 252);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 10px;
+  align-content: center;
+  align-items: center;
+  width: 170px;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+.button-menu:hover{
+  background-color: rgb(17, 87, 240);
+  cursor: pointer;
+  align-items: center;
+}
+.button-menu-1{
+  background-color: rgb(17, 119, 252);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 10px;
+  align-content: center;
+  align-items: center;
+  width: 170px;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+.button-menu-1:hover{
+  background-color: rgb(17, 87, 240);
+  cursor: pointer;
+  align-items: center;
+}
+ .btn-2{
+    border: none;
+    background-color: rgb(236, 234, 234);
+    margin-top: 50px;
+    border-radius: 5px;
+    border: black;
+    margin-right: 850px;  
+    display: flex;
+    display: inline-block;
+    margin-bottom: 12px;
+ 
+    width: 160px;
+    padding: 10px 8px;
+}
+.container{
+  margin-left: 90px;
+  margin-top: 30px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.search-bottom{
+  margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px; 
+    align-content: center;
+    align-items: center;  
+}
+
+.img1{
+  width: 20px;
+}
+
+.img-2{
+  width: 30px;
+  margin-right: 5px;
+}
+
+
+
+
+/* <style> */
+  /* grid applied here */
+  .video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 250px;
+  }
+  p{
+    font-family: Roboto, Arial;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .thumbnail{
+    width: 100%;
+  }
+  .search-bar{
+   display:block;
+  }
+
+.video-title{
+  margin-top: 0;
+  width: 200px;
+  font-size: 14px;
+  /* bold=700 */
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+/* //Grid applied here */
+.video-info-grid{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  
+}
+.channel-pic{
+  display: inline-block;
+  width: 50px;
+  vertical-align: top;
+}
+.video-info{
+  display: inline-block;
+  width: 200px;
+}
+.img{
+  width: 40px;
+  border-radius: 50px;
+}
+.thumbnail-row{
+  margin-bottom: 10px;
+}
+.video-author,
+.video-status{
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+.video-author{
+  margin-bottom: 4px;
+}
+/* 
+</style> */
+
+
+.imgg{
+  width: 20px;
+}
+.bottom-div{
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+  line-height: 40px;
+  margin-top: 100px;
+}
+
+.icon-div{
+  display: grid;
+}
