@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- //constructor -->
+</body>
+<script>
+    // function Person(first,last){
+    //     this.firstName=first,
+    //     this.lastName=last
+    // }
+    // const person1= new Person("UMA","MAHESH");
+    // const person2= new Person("ANBU","BASU");
+
+    // console.log(person1);
+    // console.log(person2);
+
+    // person1.age=22;
+    // console.log(person1.age);
+     
+     
+    //to add method in the object:
+// person1.age=22;
+
+// person2.greet = function(){
+// console.log("all the best for ur career");
+// }
+//  person2.greet();
+
+
+
+
+function Person(first,last){
+        this.firstName=first,
+        this.lastName=last,
+        this.getFullName=function(){
+             return this.firstName + " "  + this.lastName
+        }
+    }
+
+    const person1= new Person("UMA","MAHESH");
+    const person2= new Person("ANBU","BASU");
+
+    console.log(person2.getFullName()); 
+
+</script>   
+</html>
