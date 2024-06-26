@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set&maps</title>
+</head>
+<body>
+    
+
+    <script>
+// foreach vs for-in vs for-of:
+
+// avengers = ['iron man','captain America'];
+// avengers.forEach((e) => console.log(e))
+
+// avengers.forEach ((e,i) => console.log(e,i))
+
+
+// for-in: 
+// obj ={ name:'charles',age: 26}
+// for(let x in obj) {
+//     console.log(obj [x])
+// }
+
+// obj ={ name:'charles',age: 26}
+// for(let x in obj) {
+//     console.log(x)
+// }
+
+// obj ={ name:'charles',age: 26}
+// for(let i in avengers) {
+//     console.log(i)
+// }
+
+// for-of: 
+
+// for (let i of obj){
+//     console.log(i)
+// }
+
+
+// --------------------------------------------------------------------------------------------
+    //     let arr = [1,1,2,3,4,5,5,5,5,10,8]
+    //     let mySet1 = new Set(arr)
+
+    //     console.log(arr);
+    //     console.log(mySet1);
+         
+    //     let mySet2 = new Set()
+
+    //     mySet2.add (4)
+    //     mySet2.add (5)
+    //     mySet2.add ('pqr')
+    //     mySet2.add ({'a':1,'b':2})
+    //     mySet2.add (4) //set takes as a duplicate
+    //     console.log(mySet2)
+
+    //     let obj= ({'a':1,'b':2})
+    //     mySet2.add(obj)
+    //     console.log(mySet2)
+
+    //     console.log(mySet2.size) 
+    //     console.log(mySet2.has(6))
+    //     console.log(mySet2.delete(4))
+         
+    //     let arr2 = Array.from (mySet2)
+    //     console.log(arr2)
+    //     // console.clear()
+
+
+
+    //     //Maps:
+
+    //     let map1=new Map()
+
+    //     map1.set('a',1)
+    //     map1.set('b',2)
+    //     map1.set('a',3)   //key cann't change only replace the value
+    //     map1.set('c',3)   //value can change  (here a,b,c,d is keys; number is value)
+      
+    // console.log(map1.size)
+    // console.log(map1.has('c'))
+    // map1.delete('a')
+    // // console.log(map1)
+
+    // map1.set('d',2)
+    // map1.set('c',3)
+
+    // for(let i of map1){
+    //     console.log(i)
+    // }
+
+    
+    // for(let [k,v] of map1){
+    //     console.log(v)
+    // }
+
+    
+    // for(let v of map1.values()){
+    //     console.log(v)
+    // }
+
+    
+    // for(let k of map1.keys()){
+    //     console.log(k)
+    // }
+
+
+    // map1.forEach ((v,k) => {
+    //     console.log('key',k,'value',v)
+    // }) 
+
+
+
+//2d array to map
+
+// let kvArray = [['a',1],['b',1]]
+// let map2 =new Map(kvArray)
+// console.log(map2)
+// console.log(...map2)
+
+
+
+//combining arrays:
+
+// const s_cart = ["maggie","Banana"];
+// const a_cart = ["matchbox","salt"];
+
+// let recipe =[ ...s_cart,45,{name:"anbu"}, ... a_cart];
+// console.log(recipe);
+
+
+// difference between:
+
+//sort:
+
+// const numbers = [34,4,65,12,78]
+// let result = numbers.sort();
+
+//find:
+
+// let result = numbers.find((value) => {
+//     return value>50;
+// });
+
+//filter:
+
+// let result = numbers.filter((value) => {
+//     return value > 50;
+// });
+
+//map():
+
+// let result = numbers.map((value => {
+//     return value>50;
+// }));
+
+   //or:
+
+// let result = numbers.map((value => {
+//     return "#" + value;
+// }));
+
+//reduce:
+
+// let result = numbers.reduce((value) =>{
+//     return "#" + value;
+// });
+
+                //OR
+
+// let result = numbers.reduce((accumaltor,value) =>{
+//     // return accumaltor + value;
+//     //or
+//     return accumaltor * value;
+// })
+
+//map:
+
+// let result = numbers.map((acc,value) =>{
+//     return acc * value;
+// })
+
+
+// console.log(result);
+
+
+
+
+
+</script>
+</body>
+</html>
