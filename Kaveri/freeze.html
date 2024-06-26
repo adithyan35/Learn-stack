@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- we can't change more then one peoperties in that case we can use (object.defineProperties)-->
+     <script>
+        const obj = {};
+
+Object.defineProperties(obj, {
+    'a': {
+        value: 1,
+        writable: true, // Can be changed
+        enumerable: true, // Will show up in loops like for...in
+        configurable: true // Can be redefined or deleted
+    },
+    'b': {
+        value: 2,
+        writable: false, // Cannot be changed
+        enumerable: true, // Will show up in loops
+        configurable: false // Cannot be redefined or deleted
+    },
+    'c': {
+        value: 3,
+        writable: true, // Can be changed
+        enumerable: false, // Will not show up in loops
+        configurable: true // Can be redefined or deleted
+    }
+});
+
+console.log(obj.a); // Output: 1
+obj.a = 10;
+console.log(obj.a); // Output: 10
+
+console.log(obj.b); // Output: 2
+obj.b = 20;
+console.log(obj.b); // Output: 2 (change is ignored)
+
+console.log(obj.c); // Output: 3
+for (let key in obj) {
+    console.log(key); // Output: a, b (c is not enumerable)
+}
+
+     </script>
+</body>
+</html>

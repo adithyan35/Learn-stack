@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Laudantium ea doloribus nemo, reiciendis officiis nulla
+         nihil in distinctio voluptatum consectetur eum omnis ipsa nostrum voluptas,
+          debitis veniam provident. Commodi, corrupti.</p>
+
+    <script>
+        let person = new Object();
+person.name = "John";
+person.age = 30;
+person.greet = function() {
+  console.log("Hello, " + this.name);
+};
+
+// Accessing properties
+console.log(person.name); // John
+console.log(person.age); // 30
+
+// Calling a method
+person.greet(); // Hello, John
+
+    </script>
+
+</body>
+</html>

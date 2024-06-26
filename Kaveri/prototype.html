@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+    
+    <script>
+//not memory efficient:
+
+        // function Car(make,model){
+        //     this.make=make;
+        //     this.model=model;
+        //     this.describe = function(){
+        //         return `This is a ${this.make} ${this.model}`;
+        //     };
+        // }
+        // const car1= new Car('Toyota','Corolla');
+        // const car2= new Car('Honda','Civic');
+
+        // console.log(car1.describe());
+        // console.log(car2.describe());
+
+//mempry efficient:
+
+        // function Car(make,model){
+        //     this.make=make;
+        //     this.model=model;
+           
+        // }
+        // Car.prototype.describe = function(){
+        //     return `This is a ${this.make} ${this.model}`;
+        //     };
+
+        // const car1= new Car('Toyota','Corolla');
+        // const car2= new Car('Honda','Civic');
+
+        // console.log(car1.describe());
+        // console.log(car2.describe());
+
+
+      function Person(){
+        this.name = 'Elon musk'
+      }
+      function another(){
+        console.log("I am inside of function");
+        let a=24;
+        console.log(a);
+
+      }
+       Person.prototype.age=25;
+       const person1 = new Person();
+
+        Person.prototype={age:52}
+        const  person2 = new Person();
+        console.log(Person.age);
+        console.log(Person.name);
+         console.log(person1.age);
+         console.log(person2.age);
+
+another();
+console.log(typeof another);
+
+const obj={
+    name:"kaveri",
+    comapny:"wwt",
+    address:"sdfad",
+   welcome:function(){
+    this.name="kathi";
+    
+}
+}
+const proto={
+    location:"vdm"
+}
+
+Object.setPrototypeOf(obj,proto);
+
+const nestedProto={
+    msg:"I'm inside of nested Proto"
+}
+Object.setPrototypeOf(proto,nestedProto);
+console.log(obj);
+
+const newObj={
+     msg:"I am a new Object"
+}
+
+Object.setPrototypeOf(newObj,obj);
+console.log(obj);
+console.log(newObj.msg);
+
+    </script>
+</body>
+</html>
