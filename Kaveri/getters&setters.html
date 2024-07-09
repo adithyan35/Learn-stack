@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+//-Data Properties
+//-Accessor Properties:
+ //Getters => used to get data
+ //Setters => used to set data
+
+// let student ={
+//     firstName:"kaveri", //data properties
+//     lastName:"guna",
+// };
+// console.log(student.firstName+" "+student.lastName);
+
+
+// let student ={
+//      firstName:"kaveri", 
+//      lastName:"guna",
+//      fullName:function() {
+//         return student.firstName+" "+student.lastName;
+//      },
+//  };
+// console.log(student.fullName());
+
+
+// let student ={
+//      firstName:"kaveri", 
+//      lastName:"guna",
+//      fullName:function() {
+//         return  `${student.firstName} ${student.lastName}`;  //template literals
+//      },
+//  };
+// console.log(student.fullName());
+
+
+// let student ={
+//      firstName:"kaveri", 
+//      lastName:"guna",
+//      fullName:() => {                                          //Modren js
+//         return  `${student.firstName} ${student.lastName}`;
+//      },
+//  };
+// console.log(student.fullName())
+
+
+// let student ={
+//      firstName:"kaveri", 
+//      lastName:"guna",
+//      fullName(){                                             //Modren js (ES6)
+//         return  `${student.firstName} ${student.lastName}`;
+//      }
+//  };
+// console.log(student.fullName())
+
+
+
+
+
+//-Accessor Properties:
+ //Getters => used to get data
+ //Setters => used to set data
+
+// let student ={
+//      firstName:"kaveri", 
+//      lastName:"guna",
+// get fullName(){                                             
+//         return  `${student.firstName} ${student.lastName}`;
+//      },
+// set fullName(value){
+//         //split it by firstName & lastName
+//     let values = value.split(" ");
+//     this.firstName=values[0];
+//     this.lastName=values[1];
+//     console.log(values);
+//      },
+//  };
+//  student.fullName="Trisha Krishna";
+// console.log(student.fullName)
+
+
+
+let student ={
+     firstName:"kaveri", 
+     lastName:"guna",
+get fullName(){                                             
+        return  `${student.firstName} ${student.lastName}`;
+     },
+set fullName(value){
+        //split it by firstName & lastName
+    let values = value.split(" ");
+    this.firstName=values[0];
+    this.lastName=values[1] ?? " ";     //null coalesing 
+     },
+ };
+ student.fullName="kaveri";
+console.log(student.fullName)
+
+    </script>
+</body>
+</html>

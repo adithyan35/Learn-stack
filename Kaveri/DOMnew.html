@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Project</li>
+    </ul>
+    <!-- <div>
+        <p id="message"> JavaScript DOM</p>
+    </div>
+    <div>
+        <p > JavaScript DOM</p>
+    </div> -->
+    <!-- <div class="title">
+        <p class="text">thid is a dom page</p>
+    </div> -->
+
+
+     <script>
+        // let msg = document.getElementById("message");
+        // console.log(msg);
+
+        // let msg1 = document.getElementById("message1");
+        // console.log(msg1);
+
+        //let txt = document.getElementByClassName("text");
+        // console.log(document.querySelector('.title .text '));
+
+        // let p = document.querySelector('.text');
+        // console.log(p.parentNode);
+
+
+
+    //     let div = document.createElement("div")
+    //     div.innerHTML="<p>this is a innerHTML2<p>";
+
+    //         document.body.appendChild(div); //this is for our web page body connect.
+    //         div.className="title"; // we can add the class,id like any attribute
+    // console.log(div);
+
+      let menu = document.getElementById("menu");
+      let list = document.createElement("li");
+      list.innerHTML = "Content";
+       menu.appendChild(list);
+
+
+     </script>
+</body>
+</html>

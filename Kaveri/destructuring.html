@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+
+    <script>
+
+//ARRAY DESTRUCTURING:
+        // const names =["kaveri","jayanthi","preethi"];
+        // const [name1, ,name3] =names;
+        // console.log(name1)
+        // console.log(name3)
+
+        // const names =["undefined","jayanthi","preethi"];
+        // const [name1,name3] =names;
+        // console.log(name1)
+        // console.log(name3)
+
+        // const names =[undefined,"jayanthi","preethi"];
+        // const [name1="default name", ,name3] =names;
+        // console.log(name1)
+        // console.log(name3)
+
+        // const names =[null,"jayanthi","preethi"];
+        // const [name1="default name", ,name3] =names;
+        // console.log(name1)
+        // console.log(name3)
+
+        // const names =[undefined,"jayanthi","preethi"];
+        // const [name1="default name", ...name3] =names;  //default name , (2) ['jayanthi', 'preethi']
+        // const [name1="default name", ...[name3]] =names;  // default name , jayanthi
+        // const [name1="default name", ...[,name3]] =names;  // default name , preethi
+        // console.log(name1)
+        // console.log(name3)
+
+        // const names =[undefined,"jayanthi","preethi"];
+        // let name1,name3;
+        // [name1="default name", ...name3] =names;
+        // console.log(name1)
+        // console.log(name3)
+
+//OBJECT DESTRUCTURING:
+ 
+// const employee = {
+//     firstName :" kaveri",
+//     secondName:"preethi",
+// }
+// const{firstName} = employee; //destructuring
+// console.log(employee.firstName)
+// console.log(firstName)
+
+//NESTED OBJECT DESTRUCTURING:
+
+// const employee={
+//     name:{
+//         firstName:"kaveri",
+//         SecondName:"jayanthi",
+//     },
+//     age:"24",
+//     isMajor:true
+// }
+// const {name:{firstName}}=employee;
+// console.log(employee.name.firstName)
+// console.log(firstName)
+
+
+// const employee={
+//     name:{
+//         firstName:"kaveri",
+//         SecondName:"jayanthi",
+//     },
+//     age:"24",
+//     isMajor:true
+// }
+// let firstName;
+// ({name:{firstName}}=employee) 
+// console.log(employee.name.firstName)
+// console.log(firstName)
+
+
+// const employee={
+//     name:{
+//         firstName:"kaveri",
+//         SecondName:"jayanthi",
+//     },
+//     age:"24",
+//     isMajor:true
+// }
+
+// const {name} =employee;
+// console.log(employee.name.firstName)
+// console.log(name)
+
+
+//swape example using variables:
+
+// let a=10;
+// let b=20;
+// let arr =[a,b];
+// [b,a]=arr;
+// // [b,a] =  [a,b];
+// console.log(arr)
+// console.log(a,b)
+
+
+//using object:
+
+// const employee ={
+//     firstName:"kaveri",
+//     lastName:"guna",
+//     age:"24"
+// }
+// function printAgeandName({firstName,age}){
+//     console.log(firstName+' - '+age)
+// }
+// printAgeandName(employee)
+
+
+//array:
+// function calculate(a,b){
+//     const add = a+b;
+//     const sub = a-b;
+//     const mul = a*b;
+//     return [add,sub,mul];
+// }
+// const [add,sub,mul] = calculate(10,20);
+// console.log(add)
+// console.log(sub)
+// console.log(mul)
+
+//object:
+// function calculate(a,b){
+//     const add = a+b;
+//     const sub = a-b;
+//     const mul = a*b;
+//     return {add,sub,mul};
+// }
+// const ans= calculate(10,20);
+// console.log(ans)
+
+
+// function calculate(a,b){
+//     const add = a+b;
+//     const substract = a-b;
+//     const mul = a*b;
+//     return {add,sub:substract,mul}; //here using short hands
+//                     //(or)
+//     return {add:add,sub:substract,mul:mul};
+// }
+// const ans= calculate(10,20);
+// console.log(ans)
+
+
+
+// function calculate(a,b){
+//     const add = a+b;
+//     const substract = a-b;
+//     const mul = a*b;
+//     return {add,sub:substract,mul};
+// }
+// const {add,sub,mul} = calculate(10,20);
+// console.log(add)
+// console.log(sub)
+// console.log(mul)
+
+
+
+//Missed datastructure(ARRAY,OBJECT):
+//how can extract using destructuring in array and object both:
+
+//[{}] - array kulla object:
+
+// const employee =[
+//     {name:'Franklin',age:31},
+//     {name:'Jamsine',age:32}
+// ];
+// [emp1,emp2] = employee;
+// console.log(emp1)
+// console.log(emp2)
+
+
+// const employee =[
+//     {name:'Franklin',age:31},
+//     {name:'Jamsine',age:32}
+// ];
+// // [{name}] = employee;
+// // console.log(name)
+//            //or
+// [ ,{age}] = employee; //extract object using destructure
+// console.log(age)
+
+
+
+// const employee =[
+//     {name:'Franklin',age:31},
+//     {name:'Jamsine',age:32}
+// ];
+// [{age:name1Age},{age:name2Age}] = employee; //same property name can be extract like this
+// console.log(name1Age)
+// console.log(name2Age)
+
+
+
+
+//{[]} --> object kulla array:
+
+// const employee ={
+//     company1:['kavs','guna'],
+//     company2:['pree','thi']
+// }
+// const {company1:[, ,name]} = employee; //undefined
+//                     //or
+// // const {company1:[,name]} = employee; //second 
+//                     //or
+// // const {company1:[name]} = employee; //first
+// console.log(name)
+
+
+const employee ={
+    company1:['kavs','guna'],
+    company2:['pree','thi']
+}
+// const {company1:[name1],company2:[name2]} = employee; //2 diffrent property values
+                //or
+const {company1:[name1],company2:[,name2]} = employee; //2 diffrent property values
+console.log(name1)
+console.log(name2)
+
+
+
+
+    </script>
+</body>
+</html>
