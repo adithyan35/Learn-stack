@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../javascript/EventBubbling.js" defer></script>
+    <title>Event Bubbling</title>
+    <style>
+        #grandparent,#parent{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #grandparent{
+            height: 400px;
+            width: 400px;
+            background-color: rgb(92, 87, 228);
+        }
+        #parent{
+            height: 250px;
+            width: 250px;
+            background-color:rgb(14, 179, 184);
+         }
+        #child{
+            height: 125px;
+            width: 125px;
+            background-color:rgb(37, 106, 217);
+        }
+    </style>
+</head>
+<body>
+    <div id="grandparent">
+        <div id="parent">
+            <div id="child"></div>
+        </div>
+    </div>
+</body>
+</html>
