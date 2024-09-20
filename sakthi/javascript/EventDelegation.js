@@ -5,6 +5,6 @@ reducing the need to manage individual listeners for each child element. */
 document.getElementById('parent-list').addEventListener('click', function(e) {
     // Ensure the clicked element is an <li>
     if (e.target && e.target.nodeName === 'LI') {
-        console.log('List item clicked: ' + e.target.textContent);
+        console.log('The Person is: ' + e.target.textContent);
     }
 });
