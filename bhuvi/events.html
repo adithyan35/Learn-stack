@@ -1,0 +1,249 @@
+<!--/*
+Events are actions or occurrences that happen in the browser, such as clicks, form submissions, or key presses. JavaScript allows you to respond to these events using event listeners.
+
+Common Event Types
+Mouse Events: click, dblclick, mousedown, mouseup, mousemove, mouseover, mouseout, contextmenu
+Keyboard Events: keydown, keyup, keypress
+Form Events: submit, change, focus, blur, input
+Window Events: load, resize, scroll, beforeunload
+Touch Events: touchstart, touchend, touchmove, touchcancel
+
+Event Handling
+Add Event Listener-> You can attach event listeners to elements using the addEventListener method.
+Remove Event Listener-> You can remove an event listener using the removeEventListener method.
+
+Event Object
+The event object is automatically passed to the event handler and contains information about the event.
+
+Common Event Properties
+type: The type of event (e.g., "click", "keydown").
+target: The element that triggered the event.
+currentTarget: The element to which the event handler is attached.
+bubbles: Boolean indicating if the event bubbles up through the DOM.
+cancelable: Boolean indicating if the event can be canceled.
+defaultPrevented: Boolean indicating if the default action has been prevented.
+
+Common Methods
+preventDefault(): Prevents the default action associated with the event.
+stopPropagation(): Stops the event from bubbling up or capturing down through the DOM.
+stopImmediatePropagation(): Stops the event from bubbling up and prevents other listeners of the same event from being executed.
+*/
+
+// Adding event listener for a button click
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('myButton');
+  
+    // Event handler function
+    function handleClick(event) {
+      console.log(`Event Type: ${event.type}`); // Output: "click"
+      console.log(`Event Target: ${event.target.id}`); // Output: "myButton"
+      console.log(`Event Current Target: ${event.currentTarget.id}`); // Output: "myButton"
+      console.log(`Event Bubbles: ${event.bubbles}`); // Output: true
+      console.log(`Event Cancelable: ${event.cancelable}`); // Output: true
+      
+      // Prevent default action and stop propagation
+      event.preventDefault(); // Prevent default action (not needed for button click but shown for example)
+      event.stopPropagation(); // Stops the event from bubbling up
+  
+      console.log('Button clicked and event propagation stopped.');
+    }
+  
+    // Add event listener to button
+    button.addEventListener('click', handleClick);
+  
+    // Add event listener for form submission to demonstrate preventDefault
+    const form = document.getElementById('myForm');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevents form submission
+      console.log('Form submission prevented');
+    });
+  
+    // Example of using stopImmediatePropagation
+    button.addEventListener('click', function(event) {
+      event.stopImmediatePropagation(); // Stops propagation and other listeners of the same event
+      console.log('Immediate propagation stopped.');
+    });
+  
+    // Example of mouseover event
+    button.addEventListener('mouseover', function() {
+      console.log('Mouseover event triggered.');
+    });
+  
+    // Example of keyboard event
+    document.addEventListener('keydown', function(event) {
+      console.log(`Key pressed: ${event.key}`); // Output: Key pressed (e.g., 'Enter')
+    });
+  
+    // Example of window event
+    window.addEventListener('resize', function() {
+      console.log('Window resized.');
+    });
+  });-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Handling Example</title>
+  <style>
+    #myButton {
+      padding: 10px;
+      background-color: lightblue;
+      border: 1px solid blue;
+      cursor: pointer;
+    }
+
+    #myInput {
+      margin-top: 10px;
+      padding: 5px;
+      border: 1px solid gray;
+    }
+
+    #myForm {
+      margin-top: 20px;
+    }
+
+    .task {
+      margin-bottom: 10px;
+    }
+
+    .task.completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="myButton">Click Me</button>
+  <input type="text" id="myInput" placeholder="Type something">
+  <form id="myForm">
+    <label for="myInputForm">Input Field:</label>
+    <input type="text" id="myInputForm" placeholder="Type something">
+    <button type="submit">Submit Form</button>
+  </form>
+
+  <div id="taskContainer">
+    <h2>Task List</h2>
+    <input type="text" id="taskInput" placeholder="New task">
+    <button id="addTaskButton">Add Task</button>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Element Selection
+      const button = document.getElementById('myButton');
+      const form = document.getElementById('myForm');
+      const input = document.getElementById('myInput');
+      const taskInput = document.getElementById('taskInput');
+      const addTaskButton = document.getElementById('addTaskButton');
+      const taskList = document.getElementById('taskList');
+
+      // Event Handler Functions
+      function handleClick(event) {
+        console.log(`Event Type: ${event.type}`); // Event type
+        console.log(`Event Target: ${event.target.id}`); // Target element
+        console.log(`Event Current Target: ${event.currentTarget.id}`); // Current target element
+        console.log(`Event Bubbles: ${event.bubbles}`); // Bubbles property
+        console.log(`Event Cancelable: ${event.cancelable}`); // Cancelable property
+
+        event.preventDefault(); // Prevent default action
+        event.stopPropagation(); // Stop event propagation
+        console.log('Button clicked and event propagation stopped.');
+      }
+
+      function handleFormSubmit(event) {
+        event.preventDefault(); // Prevent form submission
+        console.log('Form submission prevented.');
+      }
+
+      function handleInputChange(event) {
+        console.log(`Input Value: ${event.target.value}`); // Current value of input
+      }
+
+      function handleMouseOver() {
+        console.log('Mouseover event triggered.');
+      }
+
+      function handleKeyDown(event) {
+        console.log(`Key pressed: ${event.key}`); // Key pressed
+      }
+
+      function handleResize() {
+        console.log('Window resized.');
+      }
+
+      function handleTaskClick(event) {
+        if (event.target && event.target.classList.contains('completeButton')) {
+          const task = event.target.parentElement; // Parent element
+          task.classList.toggle('completed'); // Toggle completed class
+        } else if (event.target && event.target.classList.contains('deleteButton')) {
+          const task = event.target.parentElement; // Parent element
+          taskList.removeChild(task); // Remove task from list
+        }
+      }
+
+      function addTask() {
+        const taskText = taskInput.value.trim();
+        if (taskText) {
+          const newTask = document.createElement('li'); // Create new task element
+          newTask.className = 'task'; // Class name
+          newTask.innerHTML = `
+            <span>${taskText}</span>
+            <button class="completeButton">Complete</button>
+            <button class="deleteButton">Delete</button>
+          `; // Inner HTML
+          taskList.appendChild(newTask); // Append task to list
+          taskInput.value = ''; // Clear input field
+        }
+      }
+
+      // Event Listeners
+      button.addEventListener('click', handleClick); // Add click event listener
+      form.addEventListener('submit', handleFormSubmit); // Add form submission event listener
+      input.addEventListener('input', handleInputChange); // Add input change event listener
+      button.addEventListener('mouseover', handleMouseOver); // Add mouseover event listener
+      document.addEventListener('keydown', handleKeyDown); // Add keydown event listener
+      window.addEventListener('resize', handleResize); // Add resize event listener
+      taskList.addEventListener('click', handleTaskClick); // Add click event listener for tasks
+      addTaskButton.addEventListener('click', addTask); // Add click event listener for adding tasks
+
+      // Additional Event Properties
+      button.addEventListener('click', function (event) {
+        console.log(`Event TimeStamp: ${event.timeStamp}`); // Event timestamp
+        console.log(`Event is Trusted: ${event.isTrusted}`); // True if event is generated by the user
+      });
+
+      // Example of using stopImmediatePropagation
+      button.addEventListener('click', function (event) {
+        event.stopImmediatePropagation(); // Stop propagation and other listeners of the same event
+        console.log('Immediate propagation stopped.');
+      });
+
+      // Creating and Manipulating Elements
+      function prependTask() {
+        const newTask = document.createElement('li'); // Create new task element
+        newTask.className = 'task'; // Class name
+        newTask.textContent = 'Prepended Task'; // Text content
+        taskList.insertBefore(newTask, taskList.firstChild); // Insert new task before first child
+      }
+
+      function replaceTask() {
+        if (taskList.children.length > 0) {
+          const newTask = document.createElement('li'); // Create new task element
+          newTask.className = 'task'; // Class name
+          newTask.textContent = 'Replaced Task'; // Text content
+          taskList.replaceChild(newTask, taskList.lastElementChild); // Replace last task
+        }
+      }
+
+      // Add event listeners for additional features
+      document.querySelector('#prependButton').addEventListener('click', prependTask); // Prepend task button
+      document.querySelector('#replaceButton').addEventListener('click', replaceTask); // Replace task button
+    });
+  </script>
+</body>
+
+</html>
