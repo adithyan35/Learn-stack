@@ -1,0 +1,346 @@
+<!--
+The DOM is a programming interface for web documents. It represents the structure of a document as a tree of objects, where each object corresponds to a part of the document. The DOM allows you to manipulate the content, structure, and style of a web page dynamically using JavaScript.
+
+Key Concepts
+Document: Represents the entire HTML or XML document.
+Element: Represents HTML elements (e.g., <div>, <p>, <a>).
+Node: Represents a single point in the document tree, which could be an element, attribute, or text.
+
+Common DOM Methods and Properties
+1. Selecting Elements
+
+document.getElementById(id)
+Purpose: Returns the element with the specified id.
+Example: document.getElementById('myId')
+
+document.getElementsByClassName(className)
+Purpose: Returns a live HTMLCollection of elements with the specified class name.
+Example: document.getElementsByClassName('myClass')
+
+document.getElementsByTagName(tagName)
+Purpose: Returns a live HTMLCollection of elements with the specified tag name.
+Example: document.getElementsByTagName('div')
+
+document.querySelector(selector)
+Purpose: Returns the first element that matches the specified CSS selector.
+Example: document.querySelector('.myClass')
+
+document.querySelectorAll(selector)
+Purpose: Returns a NodeList of elements that match the specified CSS selector.
+Example: document.querySelectorAll('div.myClass')
+
+2. Manipulating Elements
+
+element.innerHTML
+Purpose: Gets or sets the HTML content inside an element.
+Example: element.innerHTML = '<p>Hello</p>'
+
+element.textContent
+Purpose: Gets or sets the text content inside an element.
+Example: element.textContent = 'Hello'
+
+element.setAttribute(name, value)
+Purpose: Sets the value of an attribute on an element.
+Example: element.setAttribute('class', 'myClass')
+
+element.getAttribute(name)
+Purpose: Gets the value of an attribute on an element.
+Example: element.getAttribute('class')
+
+element.classList.add(className)
+Purpose: Adds a class to the element's class list.
+Example: element.classList.add('newClass')
+
+element.classList.remove(className)
+Purpose: Removes a class from the element's class list.
+Example: element.classList.remove('oldClass')
+
+element.classList.toggle(className)
+Purpose: Toggles a class on the element's class list.
+Example: element.classList.toggle('toggleClass')
+
+element.style.property = value
+Purpose: Sets inline CSS styles on an element.
+Example: element.style.backgroundColor = 'red'
+
+3. Creating and Removing Elements
+
+document.createElement(tagName)
+Purpose: Creates a new element node with the specified tag name.
+Example: document.createElement('div')
+
+element.appendChild(child)
+Purpose: Appends a child node to an element.
+Example: element.appendChild(newElement)
+
+element.removeChild(child)
+Purpose: Removes a child node from an element.
+Example: element.removeChild(childElement)
+
+element.replaceChild(newChild, oldChild)
+Purpose: Replaces an old child node with a new child node.
+Example: element.replaceChild(newElement, oldElement)
+
+4. Event Handling
+
+element.addEventListener(event, callback)
+Purpose: Adds an event listener to an element.
+Example: element.addEventListener('click', handleClick)
+
+element.removeEventListener(event, callback)
+Purpose: Removes an event listener from an element.
+Example: element.removeEventListener('click', handleClick)
+
+element.dispatchEvent(event)
+Purpose: Dispatches an event to the element.
+Example: element.dispatchEvent(new Event('click'))
+-->
+<!--
+Element Selection:
+document.querySelector(selector): Selects the first element that matches the selector.
+document.getElementById(id): Selects an element by its ID.
+document.getElementsByClassName(className): Selects elements by their class name.
+document.getElementsByTagName(tagName): Selects elements by their tag name.
+document.querySelectorAll(selector): Selects all elements that match the selector.
+
+Creating and Manipulating Elements:
+document.createElement(tagName): Creates a new HTML element.
+element.className: Sets the class name of an element.
+element.innerHTML: Sets the HTML content of an element.
+element.appendChild(child): Adds a new child element to the end of the list.
+element.removeChild(child): Removes a specified child element.
+element.replaceChild(newChild, oldChild): Replaces an old child element with a new one.
+element.insertBefore(newChild, referenceChild): Inserts a new child element before a reference child.
+
+Event Handling:
+element.addEventListener(event, callback): Adds an event listener to an element.
+
+Additional Features:
+element.setAttribute(name, value): Sets the value of an attribute on an element.
+element.getAttribute(name): Gets the value of an attribute on an element.
+element.style.property: Sets inline CSS styles on an element.
+element.classList.add(), element.classList.remove(), element.classList.toggle(): Manipulates class names.
+
+Accessing DOM Properties:
+element.firstChild: Gets the first child node of an element.
+element.lastElementChild: Gets the last child element of an element.
+element.children.length: Gets the number of child elements.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .task.completed {
+            text-decoration: line-through;
+            color: grey;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Add a new task" />
+        <button id="addTaskButton">Add Task</button>
+        <button id="clearCompletedButton">Clear Completed</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        // Element Selection
+        const taskInput = document.querySelector('#taskInput'); // querySelector
+        const addTaskButton = document.querySelector('#addTaskButton');
+        const clearCompletedButton = document.querySelector('#clearCompletedButton');
+        const taskList = document.getElementById('taskList'); // getElementById
+
+        // Using getElementsByClassName
+        const tasksByClass = document.getElementsByClassName('task');
+
+        // Using getElementsByTagName
+        const tasksByTag = document.getElementsByTagName('li');
+
+        // Using querySelectorAll
+        const tasksByQuery = document.querySelectorAll('.task');
+
+        // Add Task Function
+        function addTask() {
+            const taskText = taskInput.value.trim(); // Get input value and trim whitespace
+            if (taskText) {
+                const newTask = document.createElement('li'); // createElement
+                newTask.className = 'task'; // className
+                newTask.innerHTML = `
+          <span>${taskText}</span>
+          <button class="completeButton">Complete</button>
+          <button class="deleteButton">Delete</button>
+        `; // innerHTML
+                taskList.appendChild(newTask); // appendChild
+                taskInput.value = ''; // Clear input field
+            }
+        }
+
+        // Complete Task Function
+        function completeTask(event) {
+            if (event.target && event.target.classList.contains('completeButton')) {
+                const task = event.target.parentElement; // parentElement
+                task.classList.toggle('completed'); // classList.toggle
+            }
+        }
+
+        // Delete Task Function
+        function deleteTask(event) {
+            if (event.target && event.target.classList.contains('deleteButton')) {
+                const task = event.target.parentElement; // parentElement
+                taskList.removeChild(task); // removeChild
+            }
+        }
+
+        // Clear Completed Tasks Function
+        function clearCompletedTasks() {
+            const completedTasks = taskList.querySelectorAll('.completed'); // querySelectorAll
+            completedTasks.forEach(task => taskList.removeChild(task)); // removeChild
+        }
+
+        // Event Listeners
+        addTaskButton.addEventListener('click', addTask); // click event
+        taskList.addEventListener('click', completeTask); // click event
+        taskList.addEventListener('click', deleteTask); // click event
+        clearCompletedButton.addEventListener('click', clearCompletedTasks); // click event
+
+        // Additional Features: Logging the number of tasks
+        function logTaskCount() {
+            const taskCount = taskList.children.length; // children.length
+            console.log(`Total tasks: ${taskCount}`);
+        }
+
+        // Log task count every time a task is added or removed
+        addTaskButton.addEventListener('click', logTaskCount);
+        taskList.addEventListener('click', logTaskCount);
+        clearCompletedButton.addEventListener('click', logTaskCount);
+
+        // Creating and Manipulating Elements
+        function prependTask() {
+            const newTask = document.createElement('li'); // createElement
+            newTask.className = 'task'; // className
+            newTask.textContent = 'Prepended Task'; // textContent
+            taskList.insertBefore(newTask, taskList.firstChild); // insertBefore
+        }
+
+        function replaceTask() {
+            if (taskList.children.length > 0) {
+                const newTask = document.createElement('li'); // createElement
+                newTask.className = 'task'; // className
+                newTask.textContent = 'Replaced Task'; // textContent
+                taskList.replaceChild(newTask, taskList.lastElementChild); // replaceChild
+            }
+        }
+
+        // Add event listeners for additional features
+        document.querySelector('#prependButton').addEventListener('click', prependTask); // click event
+        document.querySelector('#replaceButton').addEventListener('click', replaceTask); // click event
+
+        // Example: Manipulating styles and attributes
+        document.querySelector('h1').style.color = 'blue'; // style.property
+        document.querySelector('h1').setAttribute('data-header', 'To-Do List Header'); // setAttribute
+        console.log(document.querySelector('h1').getAttribute('data-header')); // getAttribute
+
+        // Example: Logging different collections of elements
+        console.log('Tasks by class name:', tasksByClass); // getElementsByClassName
+        console.log('Tasks by tag name:', tasksByTag); // getElementsByTagName
+        console.log('Tasks by query selector:', tasksByQuery); // querySelectorAll
+
+        // Example: Accessing first and last children
+        console.log('First child of task list:', taskList.firstChild); // firstChild
+        console.log('Last element child of task list:', taskList.lastElementChild); // lastElementChild
+    </script>
+</body>
+
+</html>
+
+
+<!--
+task
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Example</title>
+    <style>
+        #myDiv {
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .button1-active {
+            background-color: lightblue;
+            color: white;
+        }
+        .button2-active {
+            background-color: lightgreen;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        <p id="myParagraph">This is a paragraph.</p>
+        <button id="button1">Button 1</button>
+        <button id="button2">Button 2</button>
+    </div>
+
+    <script>
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+        const myDiv = document.getElementById('myDiv');
+        const myParagraph = document.getElementById('myParagraph');
+
+        button1.addEventListener('click', (event) => {
+            console.log('Button 1 clicked');
+            console.log('Div triggered:', myDiv);
+            myDiv.classList.add('button1-active');  // Change style for div
+            myParagraph.style.fontWeight = 'bold';  // Change style for paragraph
+            myParagraph.style.color = 'blue';        // Change text color
+        });
+
+        button2.addEventListener('click', (event) => {
+            console.log('Button 2 triggered');
+            console.log('Paragraph triggered:', myParagraph);
+            myParagraph.classList.add('button2-active');  // Change style for paragraph
+            myDiv.style.borderColor = 'green';             // Change border color for div
+        });
+    </script>
+</body>
+</html>
+-->
