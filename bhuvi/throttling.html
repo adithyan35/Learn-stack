@@ -1,0 +1,77 @@
+<!--
+Throttling in JavaScript
+Throttling is another optimization technique like debouncing, but instead of delaying a function until a specific amount of time has passed without any new call, throttling ensures that a function is called at most once every specified interval. Throttling is useful when you want to ensure that a function is executed regularly but not too frequently, even if it's triggered multiple times in a row.
+
+Use Cases for Throttling:
+Scroll event handling: Executing a function every time a user scrolls can cause performance issues. Throttling allows the function to be called at regular intervals, e.g., once every 200ms.
+Resizing windows: Similarly, resizing can trigger many events in a short time.
+Button clicks: Prevent users from clicking a button too rapidly.
+Key Concept:
+Throttled function: Ensures that a function is only called once within a specific interval, no matter how many times it's triggered.
+
+Throttling Properties:
+Interval: The minimum amount of time that must pass between consecutive calls to the throttled function. This is controlled by the interval parameter.
+Last Time: The time at which the function was last executed is tracked internally to compare it with the current time.
+
+Throttling is a technique used to limit how frequently a function can be executed, even if it is triggered multiple times.
+throttling ensures that the function is executed at regular intervals, no matter how frequently it's called.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Throttling Example</title>
+  <style>
+    body {
+      height: 2000px;
+      margin: 0;
+    }
+    h2 {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Scroll down to see throttling in action</h2>
+
+  <script>
+    // Throttle function: Creates a throttled version of the function
+    function throttle(func, interval) {
+      let lastTime = 0;  // Keeps track of the last time the function was called
+
+      return function(...args) {
+        const now = Date.now();  // Get the current time
+
+        // If the time difference between now and the last call is greater than the interval
+        if (now - lastTime >= interval) {
+          lastTime = now;  // Update the last execution time
+          func.apply(this, args);  // Execute the original function
+        }
+      };
+    }
+
+    // Function to handle scroll event
+    function handleScroll() {
+      console.log('Scroll event triggered at:', new Date().toLocaleTimeString());
+    }
+
+    // Create a throttled version of the handleScroll function with a 300ms interval
+    const throttledScroll = throttle(handleScroll, 300);
+
+    // Add event listener for scroll, and throttle the event handler
+    window.addEventListener('scroll', throttledScroll);
+  </script>
+</body>
+</html>
+
+<!--
+Key Differences Between Throttling and Debouncing:
+Debouncing: Ensures that a function is called only after a specified time has passed since the last call.
+Useful for cases like search input where you want to delay the function execution until the user has finished typing.
+Throttling: Ensures that a function is called at most once every specified interval, even if it's triggered repeatedly during that time.
+Useful for cases like scrolling or resizing, where the function needs to execute regularly but not too frequently.
+-->
