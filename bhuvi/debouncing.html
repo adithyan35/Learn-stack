@@ -1,0 +1,89 @@
+<!--
+Debouncing is a programming technique used to ensure that time-consuming tasks do not fire so often. It is most commonly used in event handling to prevent an event from being triggered too many times in a short period. When a function is debounced, it will only be executed once after a certain amount of time has passed since the last time it was invoked.
+
+Use Cases for Debouncing:
+Search input: Prevent sending requests on every keystroke.
+Window resizing: Avoid continuous resize events during the resize process.
+Scrolling: Avoid triggering scroll-based animations or data loading multiple times.
+
+Key Concept:
+Debounced function: A debounced function will delay its execution until after a certain amount of time has passed without it being called again. This helps optimize performance by limiting how frequently a function is invoked.
+
+Methods and Properties:
+Debouncing is a technique, not an object, so it doesn’t have its own methods and properties. Instead, it wraps a function with a mechanism that controls when it can be invoked.
+Debouncing Mechanism (Basic Structure):
+Function wrapping: The original function is wrapped inside a debouncing function.
+Timeout: The debouncing function waits for a certain amount of time (e.g., 300ms) before invoking the actual function.
+Reset on repeated calls: If the debounced function is called again before the waiting period ends, the timer resets.
+
+Debouncing Properties:
+While debouncing itself doesn't have formal "properties," its behavior is affected by several factors:
+
+Delay: The number of milliseconds to wait before executing the function (300ms in the example above).
+Immediate Execution (optional): You can configure debounced functions to run immediately on the first call, then delay subsequent calls.
+
+Real-World Use Cases for Debouncing:
+Search input fields: Only send the search query after the user has stopped typing.
+Window resizing: Recalculate layout or perform other resource-heavy tasks only after the user has finished resizing the window.
+Form validation: Validate form fields only after the user has stopped interacting with them.
+Scrolling events: Avoid triggering scroll event handlers too frequently while scrolling.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debouncing Example</title>
+</head>
+<body>
+  <h2>Debouncing Example: Typing in Search Input</h2>
+  
+  <input type="text" id="search-input" placeholder="Start typing...">
+  <p id="result"></p>
+
+  <script>
+    // Debounce function: Creates a debounced version of the given function
+    function debounce(func, delay) {
+      let timeoutId;  // Stores the timeout ID
+
+      // Return a debounced version of the function
+      return function(...args) {
+        const context = this;  // Store context (for 'this' keyword in the callback)
+        
+        // Clear the previous timeout if the function is called again
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+        }
+        
+        // Set a new timeout to call the function after the delay
+        timeoutId = setTimeout(() => {
+          func.apply(context, args);  // Call the original function after the delay
+        }, delay);
+      };
+    }
+
+    // Function to simulate searching for results
+    function search(query) {
+      const resultElement = document.getElementById('result');
+      resultElement.innerText = `Searching for "${query}"...`;
+      console.log(`Fetching results for: ${query}`);
+      // Simulate an API request with a delay (this is just for demonstration)
+    }
+
+    // Get reference to input field
+    const searchInput = document.getElementById('search-input');
+
+    // Create a debounced version of the search function with a 300ms delay
+    const handleSearchInput = debounce(function(event) {
+      const query = event.target.value;
+      search(query);  // Call the debounced search function
+    }, 300);
+
+    // Add event listener to the input field to listen for 'input' event
+    searchInput.addEventListener('input', handleSearchInput);
+  </script>
+</body>
+</html>
