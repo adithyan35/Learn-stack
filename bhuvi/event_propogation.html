@@ -1,0 +1,59 @@
+<!--
+Event propagation describes the way events flow through the DOM. When an event occurs, it can travel through the DOM in two phases:
+
+Capturing Phase: The event starts from the top of the DOM tree and travels down to the target element.
+Bubbling Phase: The event starts from the target element and bubbles up to the top of the DOM tree.
+By default, most events bubble up from the target element to the root.
+
+2. Stopping Propagation
+You can control event propagation using the following methods:
+
+event.stopPropagation(): Stops the event from bubbling up the DOM tree.
+event.stopImmediatePropagation(): Stops the event from bubbling up and prevents other listeners on the same element from being executed.
+
+Event propagation in JavaScript determines how events travel through the DOM (Document Object Model) when they are triggered. Understanding how event propagation works helps in effectively managing event handling, especially when dealing with nested elements.
+
+1. Phases of Event Propagation
+Event propagation occurs in two main phases:
+
+a. Capturing Phase (Trickling Down)
+Description: The event starts from the top of the DOM tree (the document) and travels down to the target element.
+Process: During this phase, events are captured before they reach the target element.
+Usage: To handle events during this phase, use the addEventListener method with the useCapture parameter set to true (or as the third argument).
+
+b. Bubbling Phase (Bubbling Up)
+Description: The event starts from the target element and bubbles up to the top of the DOM tree.
+Process: During this phase, events are propagated back up to the root element.
+Usage: By default, events bubble up. You can handle events during this phase by setting the useCapture parameter to false (or omitting it).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Propagation Example</title>
+</head>
+<body>
+  <div id="parent">
+    Parent Div
+    <button id="child">Click Me</button>
+  </div>
+
+  <script>
+    document.getElementById('parent').addEventListener('click', function(event) {
+      console.log('Parent Div Clicked');
+    }, true); // Use capturing phase
+
+    document.getElementById('child').addEventListener('click', function(event) {
+      console.log('Child Button Clicked');
+      event.stopImmediatePropagation(); // Stops bubbling immediately
+      event.stopPropagation(); // Stops bubbling
+    });
+
+    document.getElementById('parent').addEventListener('click', function(event) {
+      console.log('This will not be logged because of stopPropagation');
+    });
+  </script>
+</body>
+</html>
