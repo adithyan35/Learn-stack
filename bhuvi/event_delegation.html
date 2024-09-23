@@ -1,0 +1,40 @@
+<!--
+Event delegation is a technique where a single event listener is attached to a parent element to manage events for its child elements. This is particularly useful when dealing with dynamic content or large numbers of child elements.
+
+2. How It Works
+Instead of attaching event listeners to each individual child element, you attach a single event listener to a common parent. The parent then uses the event’s target property to determine which child element triggered the event.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegation Example</title>
+</head>
+<body>
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <button id="addItem">Add Item</button>
+
+  <script>
+    // Event delegation: Attach event listener to parent <ul>
+    document.getElementById('myList').addEventListener('click', function(event) {
+      if (event.target.tagName === 'LI') {
+        console.log(`List item clicked: ${event.target.textContent}`);
+      }
+    });
+
+    // Adding new items dynamically
+    document.getElementById('addItem').addEventListener('click', function() {
+      const newItem = document.createElement('li');
+      newItem.textContent = `Item ${document.querySelectorAll('#myList li').length + 1}`;
+      document.getElementById('myList').appendChild(newItem);
+    });
+  </script>
+</body>
+</html>
