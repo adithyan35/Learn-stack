@@ -1,0 +1,13 @@
+:host{
+    --mdc-snackbar-container-color: rgb(11, 138, 229);
+}
+.align{
+    margin-top: 10%;
+    margin-left: 20%;
+}
+mat-form-field {
+    margin-right: 12px;
+  }
+  ::ng-deep .snackbar-component-one{
+        --mdc-snackbar-container-color: rgb(11, 138, 229);
+  }
