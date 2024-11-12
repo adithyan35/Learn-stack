@@ -1,0 +1,16 @@
+ <div class="wrap">
+    <div class="container text-center h3 p-4">
+        <p style="color: rgb(23, 79, 96);">Content Changing Task</p>
+        <div class="row">
+          <div class="col-6 d-flex justify-content-between">
+            @for(btn of ['Approve','Reject','Pending']; track btn){
+              <button class="btn" [ngClass]="btn == 'Approve' ? 'btn-success':btn=='Reject'?'btn-danger':'btn-primary'" 
+              (click)="isInput = (btn == 'Approve' ? btn+'d':btn=='Reject'?btn+'ed':btn+'')">{{btn}}</button>
+            }
+          </div>
+          <div class="col-12 mt-4 text-start h4">
+          Your Status is {{isInput || 'Pending'}}
+          </div>
+        </div>
+      </div>
+  </div>
