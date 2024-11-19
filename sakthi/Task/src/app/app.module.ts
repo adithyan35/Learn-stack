@@ -10,8 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContentchangeComponent } from './contentchange/contentchange.component';
+import { ClassnstyleComponent } from './classnstyle/classnstyle.component';
+import { DivisibleComponent } from './divisible/divisible.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +21,8 @@ import { ContentchangeComponent } from './contentchange/contentchange.component'
     Snackbar2Component,
     Snackbar3Component,
     ContentchangeComponent,
+    ClassnstyleComponent,
+    DivisibleComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,8 @@ import { ContentchangeComponent } from './contentchange/contentchange.component'
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideAnimationsAsync()

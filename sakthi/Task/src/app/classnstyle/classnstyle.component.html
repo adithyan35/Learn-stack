@@ -1,0 +1,21 @@
+<div class="profile-card"
+     [ngClass]="{ 'active': isActive, 'inactive': !isActive ,'admin': isAdmin, 'user': !isAdmin,'premium': isPremiumUser, 'regular': !isPremiumUser,'online': isOnline, 'offline': !isOnline, 'has-notifications': hasNotifications, 'no-notifications': !hasNotifications,'verified': isVerified, 'unverified': !isVerified}"
+     [ngClass]="{ 'new-user': isNewUser, 'old-user': !isNewUser }"
+     [ngClass]="{ 'banned': isBanned, 'not-banned': !isBanned }"
+     [ngClass]="{ 'dark-mode': isInDarkMode, 'light-mode': !isInDarkMode }"
+     [ngClass]="{ 'on-sale': isOnSale, 'not-on-sale': !isOnSale }">
+  <h2>Profile Card</h2>
+  <p>Status: {{ isActive ? 'Active' : 'Inactive' }}</p>
+  <p>Role: {{ isAdmin ? 'Admin' : 'User' }}</p>
+  <p>User Type: {{ isPremiumUser ? 'Premium' : 'Regular' }}</p>
+  <p>Online Status: {{ isOnline ? 'Online' : 'Offline' }}</p>
+  <p>Notifications: {{ hasNotifications ? 'Enabled' : 'Disabled' }}</p>
+  <p>Verification: {{ isVerified ? 'Verified' : 'Unverified' }}</p>
+  <p>User Type: {{ isNewUser ? 'New User' : 'Old User' }}</p>
+  <p>Ban Status: {{ isBanned ? 'Banned' : 'Not Banned' }}</p>
+  <p>Mode: {{ isInDarkMode ? 'Dark Mode' : 'Light Mode' }}</p>
+  <p>Sale Status: {{ isOnSale ? 'On Sale' : 'Not on Sale' }}</p>
+  @for(work of buttonDetails; track work){
+    <button (click)="toggle(work.associatedBoolean)">Toggle {{work.buttonName}}</button>
+  }
+</div>

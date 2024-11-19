@@ -1,0 +1,95 @@
+.profile-card {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .active {
+    background-color: #d4edda;
+    border-color: #28a745;
+  }
+  
+  .inactive {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+  }
+  
+  .admin {
+    font-weight: bold;
+  }
+  
+  .user {
+    font-style: italic;
+  }
+  
+  .premium {
+    border: 2px solid gold;
+  }
+  
+  .regular {
+    border: 2px solid gray;
+  }
+  
+  .online {
+    color: green;
+  }
+  
+  .offline {
+    color: red;
+  }
+  
+  .has-notifications {
+    background-color: #007bff;
+  }
+  
+  .no-notifications {
+    background-color: #f8f9fa;
+  }
+  
+  .verified {
+    text-decoration: underline;
+  }
+  
+  .unverified {
+    text-decoration: line-through;
+  }
+  
+  .new-user {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .old-user {
+    font-size: 14px;
+    font-style: italic;
+  }
+  
+  .banned {
+    background-color: #dc3545;
+  }
+  
+  .not-banned {
+    background-color: #28a745;
+  }
+  
+  .dark-mode {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .light-mode {
+    background-color: #f8f9fa;
+    color: black;
+  }
+  
+  .on-sale {
+    border: 2px dashed red;
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .not-on-sale {
+    border: 2px dashed gray;
+  }

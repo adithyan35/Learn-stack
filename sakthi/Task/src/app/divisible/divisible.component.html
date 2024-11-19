@@ -1,0 +1,48 @@
+<div class="container item-center">
+    <div class="row">
+      <div class="col-md-6 d-flex justify-content-center">
+        <div>
+          <div>
+            <input type="number" [formControl]="inputLength" />
+          </div>
+          @for(num of [2,3,5,7,10]; track num){
+          <div class="mt-4">
+            <button
+              class="btn btn-success"
+              [ngClass]="{ 'bg-primary': Active === true && value == num }"
+              (click)="calc(num)"
+            >
+              Number divisible by {{ num }}
+            </button>
+          </div>
+          }
+          <div class="mt-4">
+            <button
+              [disabled]="clearBtn"
+              class="btn btn-danger"
+              (click)="clear()"
+            >
+              Clear
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div
+          class="d-inline-flex mx-2 my-3"
+          [ngClass]="{
+            two: value == 2 && val % value == 0,
+            three: value == 3 && val % value == 0,
+            five: value == 5 && val % value == 0,
+            seven: value == 7 && val % value == 0,
+            ten: value == 10 && val % value == 0,
+            clear: value == 1
+          }"
+          *ngFor="let val of totalArr"
+        >
+          <div class="py-1 px-3">{{ val }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
