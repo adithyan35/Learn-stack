@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex flex-wrap justify-content-center">
+            @for(btn of arrayOfObject; track btn ){
+                <button class="btn btn-danger px-2 m-4" (click)="selected($event)">{{btn.name}}</button>
+            }
+        </div>
+    </div>
+
+</div>

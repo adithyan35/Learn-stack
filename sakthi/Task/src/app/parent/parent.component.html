@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 m-4 d-flex justify-content-center" >
+@for(btn of ['Colour','Fruits','Animals']; track btn){
+<button class="btn btn-primary px-4 mx-4" (click)="filter($event)">{{btn}}</button>
+}
+       </div>
+        <div class="col-md-12 text-center mt-4">
+            <p *ngIf="item">The selected item is {{item}}</p>
+        </div>
+    </div>
+</div>
+<hr>
+<app-child [arrayOfObject]="sortedData" (event)="getData($event)" ></app-child>

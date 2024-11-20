@@ -14,6 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContentchangeComponent } from './contentchange/contentchange.component';
 import { ClassnstyleComponent } from './classnstyle/classnstyle.component';
 import { DivisibleComponent } from './divisible/divisible.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,8 @@ import { DivisibleComponent } from './divisible/divisible.component';
     ContentchangeComponent,
     ClassnstyleComponent,
     DivisibleComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
