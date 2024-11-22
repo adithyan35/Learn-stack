@@ -18,16 +18,16 @@ export class ClassnstyleComponent {
   isOnSale = false;
 
   buttonDetails: { buttonName: string; className: string; associatedBoolean:string}[] = [
-    { buttonName: 'Status', className: 'admin', associatedBoolean: 'isActive' },
+    { buttonName: 'Status', className: 'active', associatedBoolean: 'isActive' },
     { buttonName: 'Role', className: 'admin', associatedBoolean: 'isAdmin' },
-    { buttonName: 'User Type', className: 'admin', associatedBoolean: 'isPremiumUser' },
-    { buttonName: 'Online Status', className: 'admin', associatedBoolean: 'isOnline' },
-    { buttonName: 'Notifications', className: 'admin', associatedBoolean: 'hasNotifications' },
-    { buttonName: 'Verification', className: 'admin', associatedBoolean: 'isVerified' },
-    { buttonName: 'User Type', className: 'admin', associatedBoolean: 'isNewUser' },
-    { buttonName: 'Ban Status', className: 'admin', associatedBoolean: 'isBanned' },
-    { buttonName: 'Mode', className: 'admin', associatedBoolean: 'isInDarkMode' },
-    { buttonName: 'Sale Status', className: 'admin', associatedBoolean: 'isOnSale' },
+    { buttonName: 'User Type', className: 'premium', associatedBoolean: 'isPremiumUser' },
+    { buttonName: 'Online Status', className: 'online', associatedBoolean: 'isOnline' },
+    { buttonName: 'Notifications', className: 'has-notifications', associatedBoolean: 'hasNotifications' },
+    { buttonName: 'Verification', className: 'verified', associatedBoolean: 'isVerified' },
+    { buttonName: 'User Type', className: 'new-user', associatedBoolean: 'isNewUser' },
+    { buttonName: 'Ban Status', className: 'banned', associatedBoolean: 'isBanned' },
+    { buttonName: 'Mode', className: 'dark-mode', associatedBoolean: 'isInDarkMode' },
+    { buttonName: 'Sale Status', className: 'on-sale', associatedBoolean: 'isOnSale' },
 
   ];
   toggle(Bool:string ){

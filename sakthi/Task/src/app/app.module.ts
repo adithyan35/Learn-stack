@@ -16,6 +16,10 @@ import { ClassnstyleComponent } from './classnstyle/classnstyle.component';
 import { DivisibleComponent } from './divisible/divisible.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { Depinj1Component } from './depinj1/depinj1.component';
+import { Depinj2Component } from './depinj2/depinj2.component';
+import { MatSelectModule } from '@angular/material/select';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +31,8 @@ import { ChildComponent } from './child/child.component';
     DivisibleComponent,
     ParentComponent,
     ChildComponent,
+    Depinj1Component,
+    Depinj2Component,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,8 @@ import { ChildComponent } from './child/child.component';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   providers: [
     provideAnimationsAsync()

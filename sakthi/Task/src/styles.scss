@@ -3,3 +3,35 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 // :root{
 //     --mdc-snackbar-container-color: rgb(14, 161, 156);
 // }  
+.blue{
+    background-color:blue;
+}
+.black{
+    background-color:black;
+}
+.red{
+    background-color:red;
+}
+.yellow{
+    background-color:yellow;
+}
+.rectangle{
+    width:300px;
+    height:150px;
+}
+.square{
+    width:150px;
+    height:150px;
+}
+.circle{
+    width:150px;
+    height:150px;
+    border-radius:50% ;
+}
+.triangle {
+    width: 0; /* Set width to 0 */
+    height: 0; /* Set height to 0 */
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+     /* Define the color for the triangle */
+  }

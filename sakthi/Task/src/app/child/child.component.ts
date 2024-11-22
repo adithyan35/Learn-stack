@@ -8,7 +8,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, input, Output 
 })
 export class ChildComponent {
 @Input()
-arrayOfObject:any=[]
+arrayOfObject:any=[];
 @Output()
 event=new EventEmitter;
 selected(e:any){

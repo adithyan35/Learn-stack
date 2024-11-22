@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex gap-5">
+            <mat-form-field>
+                <mat-label>Select shape</mat-label>
+                <mat-select [(value)]="shape">
+                <mat-option>None</mat-option>
+                  <mat-option value="rectangle">Rectangle</mat-option>
+                  <mat-option value="square">Square</mat-option>
+                  <mat-option value="triangle">Triangle</mat-option>
+                  <mat-option value="circle">Circle</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Select colour</mat-label>
+                <mat-select [(value)]="colour">
+                  <mat-option>None</mat-option>
+                  <mat-option value="red">Red</mat-option>
+                  <mat-option value="blue">Blue</mat-option>
+                  <mat-option value="yellow">Yellow</mat-option>
+                  <mat-option value="black">Black</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="col-lg-6">
+         <button class="btn btn-success" (click)="draw()">Draw</button>
+        </div>
+       <div class="shape d-inline block"> 
+        <div 
+  [ngStyle]="{
+    'border-bottom': colShapeClass.includes('triangle') 
+                      ? '100px solid ' + colShapeClass.replace('triangle', '').trim() 
+                      : '' 
+  }" 
+  [ngClass]="colShapeClass.includes('triangle')?'triangle':colShapeClass">
+</div>
+       </div> 
+    </div>
+</div>
